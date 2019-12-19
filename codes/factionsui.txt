@@ -1,1 +1,47 @@
-
+cmd create fui Factions UI
+cmd edit fui 1 %player% = %p%
+cmd edit fui 2 %gui%[\"type\"] = \"form\"
+cmd edit fui 3 %gui%[\"title\"] = \"§6§lFactions UI §r§d1.0.0-§4§lbeta\"
+cmd edit fui 4 %gui%[\"content\"] = \"§6A plethora of features for Factions based on a UI.\"
+cmd edit fui 5 %button0%[\"text\"] = \"§d§lCreate a Faction\"
+cmd edit fui 6 %button1%[\"text\"] = \"§d§lInvite a Player\"
+cmd edit fui 7 %button2%[\"text\"] = \"§d§lGo to your Faction Home\"
+cmd edit fui 8 %button3%[\"text\"] = \"§cExit\"
+cmd edit fui 9 %buttons%[] =%button0%
+cmd edit fui 10 %buttons%[] = %button1%
+cmd edit fui 11 %buttons%[] = %button2%
+cmd edit fui 12 %buttons%[] = %button3%
+cmd edit fui 13 %gui%[\"buttons\"] = %buttons%
+cmd edit fui 14 %response% = dialog(%player%, %gui%)
+cmd edit fui 15 if %response% = 0 then goto 21
+cmd edit fui 16 if %response% = 1 then goto
+cmd edit fui 17 if %response% = 2 then /f home
+cmd edit fui 18 if %response% = 3 then exit
+cmd edit fui 20 #BUG
+cmd edit fui 21 %all% = onlineplayers()
+cmd edit fui 22 %player% = %p% 
+cmd edit fui 23 %form%[\"type\"] = \"custom_form\"
+cmd edit fui 24 %form%[\"title\"] = \"§6Faction Create UI\"
+cmd edit fui 25 %i1%[\"type\"] = \"input\"
+cmd edit fui 26 %i1%[\"text\"] = \"§6Type the name your Faction wants.\"
+cmd edit fui 27 %i1%[\"placeholder\"] = \"§6Type here...\"
+cmd edit fui 27 %con%[] = %i1%
+cmd edit fui 28 %form%[\"content\"] = %con%
+cmd edit fui 29 %response% = dialog(%p%, %form%)
+cmd edit fui 30 if %response% = \"\" then exit
+cmd edit fui 31 /f create %response
+cmd edit fui 32 exit
+cmd edit fui 40 #BUG
+cmd edit fui 41 %all% = onlineplayers()
+cmd edit fui 42 %player% = %p% 
+cmd edit fui 43 %form%[\"type\"] = \"custom_form\"
+cmd edit fui 44 %form%[\"title\"] = \"§6Faction Create UI\"
+cmd edit fui 45 %i1%[\"type\"] = \"input\"
+cmd edit fui 46 %i1%[\"text\"] = \"§6Type the player's name you want to invite to your Faction.\"
+cmd edit fui 47 %i1%[\"placeholder\"] = \"§6Type here...\"
+cmd edit fui 48 %con%[] = %i1%
+cmd edit fui 49 %form%[\"content\"] = %con%
+cmd edit fui 50 %response% = dialog(%p%, %form%)
+cmd edit fui 51 if %response% = \"\" then exit
+cmd edit fui 52 /f invite %response
+cmd edit fui 53 exit
