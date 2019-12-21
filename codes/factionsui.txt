@@ -17,6 +17,7 @@ cmd edit fui 15 if %response% = 0 then goto 21
 cmd edit fui 16 if %response% = 1 then goto 41
 cmd edit fui 17 if %response% = 2 then /f home
 cmd edit fui 18 if %response% = 3 then exit
+cmd edit fui 19 exit
 cmd edit fui 20 #CREATE
 cmd edit fui 21 %all% = onlineplayers()
 cmd edit fui 22 %player% = %p% 
