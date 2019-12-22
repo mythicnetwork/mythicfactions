@@ -34,10 +34,10 @@ cmd edit report 60 let %response% = dialog(%player%, %form%)
 cmd edit report 61 if %response% = %false% then exit
 cmd edit report 62 %index% = %response%[0]
 cmd edit report 63 %name% = %all%[%index%]
-cmd edit report 64 %reason% = %response%[1]
+cmd edit report 64 %reason% = %response%
 cmd edit report 65 if varset(%name%) and varset(%reason%) then goto 69
 cmd edit report 68 exit
-cmd edit report 69 %discord_message% = \"**Player  Report BETA** \" + %p% + \" reported %name% for %reason%\"
+cmd edit report 69 %discord_message% = \"**Player Report** \" + %p% + \" reported %name% for %reason%\"
 cmd edit report 70 %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=656903455314673695&token=T9pQ0GOUCiUQyaxzjIeLnaTDJg5PfoCkwXM3E1RVa1pLLxRAtH-mTWpn3g74gYxOpJHY&message=\" + urlencode(%discord_message%))
 cmd edit report 100 message %p% §d§lMythic §cNetwork§6 »§r§6 You reported §d%name%§6 for §d%reason%§6.
 cmd edit report 101 ascon /cmd add reports %p% reported %name% for %reason%.
