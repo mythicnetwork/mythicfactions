@@ -1,7 +1,8 @@
+cmd create report Report UI 2.0.0 by NikosProGamer
 cmd edit report 1 sleep 1
 cmd edit report 2 %player% = %p%
 cmd edit report 3 %gui%[\"type\"] = \"form\"
-cmd edit report 4 %gui%[\"title\"] = \"§6Report UI 1.1.0\"
+cmd edit report 4 %gui%[\"title\"] = \"§6Report UI 2.0.0\"
 cmd edit report 5 %gui%[\"content\"] = \"§6What would you like to report?\"
 cmd edit report 6 %button0%[\"text\"] = \"§dA player\"
 cmd edit report 7 %button1%[\"text\"] = \"§dA bug\"
@@ -34,14 +35,14 @@ cmd edit report 60 let %response% = dialog(%player%, %form%)
 cmd edit report 61 if %response% = %false% then exit
 cmd edit report 62 %index% = %response%[0]
 cmd edit report 63 %name% = %all%[%index%]
-cmd edit report 64 %reason% = %response%
+cmd edit report 64 %reason% = %response%[1]
 cmd edit report 65 if varset(%name%) and varset(%reason%) then goto 69
 cmd edit report 68 exit
-cmd edit report 69 %discord_message% = \"**Player Report** \" + %p% + \" reported %name% for %reason%\"
+cmd edit report 69 %discord_message% = \"**Player Report |** \" + %p% + \" reported \" +%name% + \" for \" + %reason% + \".\"
 cmd edit report 70 %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=656903455314673695&token=T9pQ0GOUCiUQyaxzjIeLnaTDJg5PfoCkwXM3E1RVa1pLLxRAtH-mTWpn3g74gYxOpJHY&message=\" + urlencode(%discord_message%))
-cmd edit report 100 message %p% §d§lMythic §cNetwork§6 »§r§6 You reported §d%name%§6 for §d%reason%§6.
-cmd edit report 101 ascon /cmd add reports %p% reported %name% for %reason%.
-cmd edit report 102 exit
+cmd edit report 71 message %p% §d§lMythic §cNetwork§6 »§r§6 You reported §d%name%§6 for §d%reason%§6.
+cmd edit report 72 ascon /cmd add reports %p% reported %name% for %reason%.
+cmd edit report 73 exit
 cmd edit report 103 #BUG
 cmd edit report 104 sleep 1
 cmd edit report 105 %all% = onlineplayers()
@@ -55,5 +56,8 @@ cmd edit report 112 %con%[] = %i1%
 cmd edit report 113 %form%[\"content\"] = %con%
 cmd edit report 114 %response% = dialog(%p%, %form%)
 cmd edit report 115 if %response% = \"\" then exit
-cmd edit report 116 ascon /cmd add bugs %p% reported this bug: %response%
-cmd edit report 117 exit
+cmd edit report 116 %discord_message% = \"**Bug Report |** \" + %p% + \" reported the bug: \"+ %response% + \".\"
+cmd edit report 117 let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=658343840708558871&token=lFsu6wzmDLWOcrxUko5mCKfpnmyUjgM7KFXTpGfnLLLNoKhJ9fmTWbGtou03rcfyarZw&message=\" + urlencode(%discord_message%))
+cmd edit report 118 message %p% §d§lMythic §cNetwork§6 »§r§6 You reported this bug: §d%response%§6.
+cmd edit report 119 ascon /cmd add bugs %p% reported this bug: %response%
+cmd edit report 120 exit
