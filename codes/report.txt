@@ -1,4 +1,5 @@
 cmd create report Report UI 2.0.0 by NikosProGamer
+cmd edit report 1 %all% = onlineplayers()
 cmd edit report 2 %player% = %p%
 cmd edit report 3 %gui%[\"type\"] = \"form\"
 cmd edit report 4 %gui%[\"title\"] = \"§6Report UI 2.0.0\"
@@ -12,8 +13,8 @@ cmd edit report 11 %buttons%[] = %button2%
 cmd edit report 12 %gui%[\"buttons\"] = %buttons%
 cmd edit report 13 %response% = dialog(%player%, %gui%)
 cmd edit report 14 if %response% = 0 then goto 19
-cmd edit report 15 if %response% = 1 then goto 103
-cmd edit report 16 if %response% = 2 then goto exit
+cmd edit report 15 if %response% = 1 then goto 104
+cmd edit report 16 if %response% = 2 then exit
 cmd edit report 17 exit
 cmd edit report 19 let %player% = %p%
 cmd edit report 20 if varset(%args%[1]) then %player% = %args%[1]
@@ -36,25 +37,26 @@ cmd edit report 63 %name% = %all%[%index%]
 cmd edit report 64 %reason% = %response%[1]
 cmd edit report 65 if varset(%name%) and varset(%reason%) then goto 69
 cmd edit report 68 exit
-cmd edit report 69 %discord_message% = \"**Player Report |** \" + %p% + \" reported \" +%name% + \" for :\"``` + %reason% + \".```\"
+cmd edit report 69 %discord_message% = \"**Player Report |** \" + %p% + \" reported \" +%name% + \" for \" + %reason% + \".\"
 cmd edit report 70 %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=656903455314673695&token=T9pQ0GOUCiUQyaxzjIeLnaTDJg5PfoCkwXM3E1RVa1pLLxRAtH-mTWpn3g74gYxOpJHY&message=\" + urlencode(%discord_message%))
 cmd edit report 71 message %p% §d§lMythic §cNetwork§6 »§r§6 You reported §d%name%§6 for §d%reason%§6. Thanks for making the network safer!
 cmd edit report 72 ascon /cmd add reports %p% reported %name% for %reason%.
 cmd edit report 73 exit
 cmd edit report 103 #BUG
-cmd edit report 105 %all% = onlineplayers()
-cmd edit report 106 %player% = %p% 
-cmd edit report 107 %form%[\"type\"] = \"custom_form\"
-cmd edit report 108 %form%[\"title\"] = \"§6Report a bug\"
-cmd edit report 109 %i1%[\"type\"] = \"input\"
-cmd edit report 110 %i1%[\"text\"] = \"§6Describe your bug below.\"
-cmd edit report 111 %i1%[\"placeholder\"] = \"§6Type here...\"
-cmd edit report 112 %con%[] = %i1%
-cmd edit report 113 %form%[\"content\"] = %con%
-cmd edit report 114 %response% = dialog(%p%, %form%)
-cmd edit report 115 if %response% = \"\" then exit
-cmd edit report 116 %bug% = %response%[1]
-cmd edit report 117 %discord_message% = \"**Bug Report |** \" + %p% + \" reported the bug: \"``` + %bug% + \".```\"
+cmd edit report 104 %all% = onlineplayers()
+cmd edit report 105 %player% = %p% 
+cmd edit report 106 %form%[\"type\"] = \"custom_form\"
+cmd edit report 107 %form%[\"title\"] = \"§6Report a bug\"
+cmd edit report 108 %i1%[\"type\"] = \"input\"
+cmd edit report 109 %i1%[\"text\"] = \"§6Describe your bug below.\"
+cmd edit report 110 %i1%[\"placeholder\"] = \"§6Type here...\"
+cmd edit report 111 %con%[] = %i1%
+cmd edit report 112 %form%[\"content\"] = %con%
+cmd edit report 113 %response% = dialog(%p%, %form%)
+cmd edit report 114 %bug% = %response%[0]
+cmd edit report 115 if varset(%bug%) then goto 117
+cmd edit report 116 exit
+cmd edit report 117 %discord_message% = \"**Bug Report |** \" + %p% + \" reported the bug: \" + %bug% + \".\"
 cmd edit report 118 let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=658343840708558871&token=lFsu6wzmDLWOcrxUko5mCKfpnmyUjgM7KFXTpGfnLLLNoKhJ9fmTWbGtou03rcfyarZw&message=\" + urlencode(%discord_message%))
 cmd edit report 119 message %p% §d§lMythic §cNetwork§6 »§r§6 You reported this bug: §d%bug%§6. Thanks for making our job easier!
 cmd edit report 120 ascon /cmd add bugs %p% reported this bug: %bug%
