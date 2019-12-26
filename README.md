@@ -1,7 +1,12 @@
-# mythicfactions
-The Official Coding Repository of Mythic Network Factions.
+# Mythic Network Factions
 
-Here the development team of Mythic Network will commit and change items in this repository.
+The Official Mythic Network Factions Coding Repository.
 
-Head of Development Team,
+This is the dev branch and upcoming features are uploaded here.
+
+Only the Developers of Mythic Network will add stuff to this repository and people who issue a pull ruquest.
+
+Kind regards,
+
+The Mythic Network Development Head
 NikosProGamer
