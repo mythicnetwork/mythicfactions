@@ -22,11 +22,11 @@ cmd add kits %buttons%[] = %button4%
 cmd add kits %buttons%[] = %button5%
 cmd add kits %gui%[\"buttons\"] = %buttons%
 cmd add kits %response% = dialog(%player%, %gui%)
-cmd add kits if %response% = 0 then goto 32
-cmd add kits if %response% = 1 then goto 42
-cmd add kits if %response% = 2 then goto 56
-cmd add kits if %response% = 3 then goto 66
-cmd add kits if %response% = 4 then goto 76
+cmd add kits if %response% = 0 then goto 31
+cmd add kits if %response% = 1 then goto 47
+cmd add kits if %response% = 2 then message %p% §dWarrior §6kit will be available soon.
+cmd add kits if %response% = 3 then message %p% §dEmperor §6kit will be available soon.
+cmd add kits if %response% = 4 then goto 78
 cmd add kits if %response% = 5 then goto exit
 cmd add kits exit
 cmd add kits #MemberKit
@@ -35,13 +35,20 @@ cmd add kits let %pgrp% = playergroup(%p%)
 cmd add kits if %pgrp% in %kit1% then goto 37
 cmd add kits message %p% §6You don't have permission to use this command.
 cmd add kits exit
-cmd add kits asop /kitgive pvp %p%
+cmd add kits ascon /give %p% 306 1
+cmd add kits ascon /give %p% 307 1
+cmd add kits ascon /give %p% 308 1
+cmd add kits ascon /give %p% 309 1
+cmd add kits ascon /give %p% 267 1
+cmd add kits ascon /give %p% steak 64
+cmd add kits ascon /give %p% iron_pickaxe 1
+cmd add kits ascon /give %p% iron_axe 1
 cmd add kits message %p% §6You have choosed §l§6Member§r §6kit!
 cmd add kits exit
 cmd add kits #VoterKit
 cmd add kits let %kit2% = array(\"Voter\", \"YT\", \"Creator\", \"Emperor\", \"Warrior\", \"God\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
 cmd add kits let %pgrp% = playergroup(%p%)
-cmd add kits if %pgrp% in %kit2% then goto 46
+cmd add kits if %pgrp% in %kit2% then goto 53
 cmd add kits message %p% §6You don't have permission to use this command.
 cmd add kits exit
 cmd add kits ascon /give %p% 310 1
@@ -71,9 +78,9 @@ cmd add kits message %p% §6You have choosed §lEmperor§r §6kit!
 cmd add kits exit
 cmd add kits #GoldenKingKit(MONEY)
 cmd add kits let %money% = playerbalance(%p%)
-cmd add kits if %money% > 1000 then goto 78
-cmd add kits if %money% = 1000 then goto 78
-cmd add kits if %money% < 1000 then goto 76
+cmd add kits if %money% > 1000 then goto 85
+cmd add kits if %money% = 1000 then goto 85
+cmd add kits if %money% < 1000 then goto 83
 cmd add kits message %p% §d§lMythic §cNetwork §6»§r§d You don't have enough money to buy the §e§lGolden King §r§6kit!
 cmd add kits exit
 cmd add kits ascon /takemoney 1000 %p% 
@@ -83,4 +90,7 @@ cmd add kits ascon /give %p% golden_leggings 1
 cmd add kits ascon /give %p% golden_boots 1
 cmd add kits ascon /give %p% golden_sword 1
 cmd add kits ascon /give %p% golden_apple 12
+cmd add kits ascon /give %p% steak 64
+cmd add kits ascon /give %p% gold_pickaxe 1
+cmd add kits ascon /give %p% gold_axe 1
 cmd add kits exit
