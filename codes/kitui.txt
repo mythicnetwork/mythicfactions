@@ -83,6 +83,7 @@ cmd add kits if %money% = 1000 then goto 85
 cmd add kits if %money% < 1000 then goto 83
 cmd add kits message %p% §d§lMythic §cNetwork §6»§r§d You don't have enough money to buy the §e§lGolden King §r§6kit!
 cmd add kits exit
+cmd add kits message %p% §d§lMythic §cNetwork §6»§r§6 You successfully bought §e§lGolden King §r§6kit!
 cmd add kits ascon /takemoney 1000 %p% 
 cmd add kits ascon /give %p% golden_helmet 1
 cmd add kits ascon /give %p% golden_chestplate 1
