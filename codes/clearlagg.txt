@@ -12,6 +12,6 @@ cmd add cl message onlineplayers() §6ClearLagg §8§l>§r §6Clearing entities 
 cmd add cl sleep 60
 cmd add cl message onlineplayers() §6ClearLagg §8§l>§r §6Clearing entities in 1 minute.
 cmd add cl sleep 60
-cmd add cl ascon /lagg clear
+cmd add cl asop /lagg clear
 cmd add cl message onlineplayers() §6ClearLagg §8§l>§r §6Cleared excessive entities.
 cmd add cl goto 6 
