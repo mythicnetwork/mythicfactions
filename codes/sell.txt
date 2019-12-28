@@ -67,7 +67,7 @@ cmd add sell exit
 cmd add sell let %ids% = %sells%[\"ids\"]
 cmd add sell let %size% = size(%ids%)
 cmd add sell if %size% > 1 then goto 72
-cmd add sell message %p% §c6here is nothing in the sell list at the moment! Use /sell add <id:meta> <price> to add items to the sell list!
+cmd add sell message %p% §6here is nothing in the sell list at the moment! Use /sell add <id:meta> <price> to add items to the sell list!
 cmd add sell exit
 cmd add sell let %metas% = %sells%[\"variants\"]
 cmd add sell let %prices% = %sells%[\"prices\"]
