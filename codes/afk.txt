@@ -1,39 +1,39 @@
-cmd create afk Show everybody that you are afk
-cmd edit afk 1 if %args%[1] = ("reset") then goto 100
-cmd edit afk 2 load %afk%
-cmd edit afk 3 if varset(%afk%[%p%]) then message %p% §6You can't do /afk two times!
-cmd edit afk 4 if varset(%afk%[%p%]) then exit
-cmd edit afk 5 let %xx% = %x%
-cmd edit afk 6 let %yy% = %y%
-cmd edit afk 7 let %zz% = %z%
-cmd edit afk 8 let %yaww% = %yaw%
-cmd edit afk 9 let %pitchh% = %pitch%
-cmd edit afk 10 let %levell% = %level%
-cmd edit afk 11 message onlineplayers() §d§lM§cN §r§6AFK §e| §d%p% §6is now AFK!
-cmd edit afk 12 load %afk%
-cmd edit afk 13 let %afk%[%p%] = %true%
-cmd edit afk 14 save %afk%
-cmd edit afk 15 if %p% notin onlineplayers() then goto 50
-cmd edit afk 16 if %x% != %xx% then goto 24
-cmd edit afk 17 if %y% != %yy% then goto 24
-cmd edit afk 18 if %z% != %zz% then goto 24
-cmd edit afk 19 if %yaw% != %yaww% then goto 24
-cmd edit afk 20 if %pitch% != %pitchh% then goto 24
-cmd edit afk 22 if %level% != %level% then goto 24
-cmd edit afk 23 sleep 0.2
-cmd edit afk 24 goto 15
-cmd edit afk 25 message onlineplayers() §d§lM§cN §r§6AFK §e| §d%p% §6is no longer AFK!
-cmd edit afk 26 load %afk%
-cmd edit afk 27 let %afk%[%p%] =
-cmd edit afk 28 save %afk%
-cmd edit afk 29 exit
+cmd create afk AFK Status Command
+cmd add afk if %args%[1] = ("reset") then goto 100
+cmd add afk load %afk%
+cmd add afk if varset(%afk%[%p%]) then message %p% §6You can't do /afk two times!
+cmd add afk if varset(%afk%[%p%]) then exit
+cmd add afk let %xx% = %x%
+cmd add afk let %yy% = %y%
+cmd add afk let %zz% = %z%
+cmd add afk let %yaww% = %yaw%
+cmd add afk let %pitchh% = %pitch%
+cmd add afk let %levell% = %level%
+cmd add afk message onlineplayers() §d§lM§cN §r§6AFK §e| §d%p% §6is now AFK!
+cmd add afk load %afk%
+cmd add afk let %afk%[%p%] = %true%
+cmd add afk save %afk%
+cmd add afk if %p% notin onlineplayers() then goto 50
+cmd add afk if %x% != %xx% then goto 24
+cmd add afk if %y% != %yy% then goto 24
+cmd add afk if %z% != %zz% then goto 24
+cmd add afk if %yaw% != %yaww% then goto 24
+cmd add afk if %pitch% != %pitchh% then goto 24
+cmd add afk if %level% != %level% then goto 24
+cmd add afk sleep 0.2
+cmd add afk goto 15
+cmd add afk message onlineplayers() §d§lM§cN §r§6AFK §e| §d%p% §6is no longer AFK!
+cmd add afk load %afk%
+cmd add afk let %afk%[%p%] =
+cmd add afk save %afk%
+cmd add afk exit
 cmd edit afk 49 exit
-cmd edit afk 50 load %afk%
-cmd edit afk 51 let %afk%[%p%] =
-cmd edit afk 55 save %afk%
-cmd edit afk 56 exit
+cmd add afk load %afk%
+cmd add afk let %afk%[%p%] =
+cmd add afk save %afk%
+cmd add afk exit
 cmd edit afk 99 exit
-cmd edit afk 100 load %afk%
-cmd edit afk 101 let %afk%[%p%] =
-cmd edit afk 102 save %afk%
-cmd edit afk 103 message %p% §6Successfully reset your AFK status!
+cmd add afk load %afk%
+cmd add afk let %afk%[%p%] =
+cmd add afk save %afk%
+cmd add afk message %p% §6Successfully reset your AFK status!
