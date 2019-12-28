@@ -1,7 +1,7 @@
 cmd create kits A advanced kit UI made by NikosProGamer
 cmd add kits let %allowed% = array(\"YT\", \"Guest\", \"Creator\", \"God\", \"Warrior\", \"Emperor\", \"Owner\", \"Admin\", \"Mod\", \"Helper\", \"Voter\")
 cmd add kits let %pgrp% = playergroup(%p%)
-cmd add kits if %pgrp% in %allowed% then goto 7
+cmd add kits if %pgrp% in %allowed% then goto 6
 cmd add kits message %p% §6You don't have permission to use this command.
 cmd add kits exit
 cmd add kits %player% = %p%
