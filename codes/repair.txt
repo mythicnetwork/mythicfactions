@@ -1,0 +1,70 @@
+#REPAIR
+cmd create repair §a Repair
+cmd add repair %money% = playerbalance(%p%)
+cmd add repair %player% = %p%
+cmd add repair %gui%[\"type\"] = \"form\"
+cmd add repair %gui%[\"title\"] = \"§b§lRepair §cBeta§r\"
+cmd add repair %gui%[\"content\"] = \"§e§lSelectionne tes items§r\"
+cmd add repair %opt0%[\"text\"] = \"§c§lQuit§r\"
+cmd add repair %opt1%[\"text\"] = \"§l§1 Repair§r\"
+cmd add repair %buttons%[] = %opt0%
+cmd add repair %buttons%[] = %opt1%
+cmd add repair %gui%[\"buttons\"] = %buttons%
+cmd add repair %response% = dialog(%player%, %gui%)
+cmd add repair if varset(%response%) = %false% then exit
+cmd add repair if %response% = 0 then exit
+cmd add repair if %response% = 1 then goto 100
+cmd add repair exit
+
+
+cmd insert repair 100 %gui1%[\"type\"] = \"form\"
+cmd add repair %gui1%[\"title\"] = \"§6Repair§r\"
+cmd add repair %gui1%[\"content\"] = \"§l select§r\"
+cmd add repair %cancel%[\"text\"] = \"§c§lCancel§r\"
+cmd add repair %level1%[\"text\"] = \"§8§lRepair §r- §f$5000§r\"
+cmd add repair %levels1%[] = %cancel%
+cmd add repair %levels1%[] = %level1%
+cmd add repair %gui1%[\"buttons\"] = %levels1%
+cmd add repair %response1% = dialog(%player%, %gui1%)
+cmd add repair if varset(%response1%) = %false% then exit
+cmd add repair if %response1% = 5000 then exit
+cmd add repair if %response1% = 1 then goto 125
+cmd add repair exit
+cmd insert repair 125 if %money% < 5000 then message %player% §c§lM§bN §cYou need at least $5000 for repair
+cmd add repair if %money% < 5000 then exit
+cmd add repair ascon /takemoney %player% 5000
+cmd add repair /fix
+cmd add repair exit
+#FIX
+cmd create fix §crepair your tools §bBeta.
+cmd add fix if varset(%args%[1]) then goto 26
+cmd add fix let %tools% = array(256,257,258,259,261,269,270,271,273,274,275,277,278,279,284,285,286,291,292,293,294,346,359)
+cmd add fix let %weapons% = array(267,268,272,276,283)
+cmd add fix let %armor% = array(298,299,300,301,302,303,304,305,306,307,308,309,310,311,312,313,314,315,316,317,443)
+cmd add fix let %hand% = playerhand(%p%)
+cmd add fix let %id% = %hand%["id"]
+cmd add fix if (%id% in %tools%) or (%id% in %weapons%) or (%id% in %armor%) then goto 10
+cmd add fix message %p% §cThe item you are holding is not repairable!
+cmd add fix exit
+cmd add fix let %variant% = %hand%["variant"]
+cmd add fix if %variant% = 0 then goto 29
+cmd add fix let %inv% = playerinventory(%p%)
+cmd add fix let %hand%["invslot"] =
+cmd add fix async
+cmd add fix let %slot% = size(%inv%)
+cmd add fix let %slot% = %slot% - 1
+cmd add fix if %slot% = -1 then exit
+cmd add fix if %inv%[%slot%] != %hand% then goto 16
+cmd add fix sync
+cmd add fix let %hand%["variant"] = 0
+cmd add fix let %inv%[%slot%] = %hand%
+cmd add fix carry %p% %inv%
+cmd add fix let %name% = %hand%["name"]
+cmd add fix message %p% §l§cM§bN§r§a %name%§r§7 (%id%:0) §c§lM§bN §r§a repaired!
+cmd add fix exit
+cmd add fix #please do not edit this in anyway! If there are any problems contact  in the our network Server!
+cmd add fix message %p% \"§cM§bN§r§c To use this command, hold the item you want to fix and type in /repair\"
+cmd add fix exit
+cmd add fix message %p% §c§lM§bN §cThis tool is already repaired!
+cmd add fix exit
+cmd unregistere fix
