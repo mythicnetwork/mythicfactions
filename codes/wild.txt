@@ -3,5 +3,5 @@ cmd add wild let %wild-x% = random(-1500, 1500)
 cmd add wild let %wild-y% = 90
 cmd add wild let %wild-z% = random(-1500, 1500)
 cmd add wild ascon /effect %p% resistance 20 255
-cmd add wild move %p% standard %wild-x% %wild-y% %wild-z%
+cmd add wild move %p% world %wild-x% %wild-y% %wild-z%
 cmd add wild message %p% §d§lM§cN §e|§r §6Teleported to the Wild!
