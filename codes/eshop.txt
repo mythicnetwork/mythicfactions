@@ -2,20 +2,20 @@ cmd create eshop Enchantment Shop
 cmd add eshop %player% = %p%
 cmd add eshop if varset(%args%[1]) then let %player% = %args%[1]
 cmd add eshop %gui%[\"type\"] = \"form\"
-cmd add eshop %gui%[\"title\"] = \"§b§lεηcнαηтмεηт sнσρ§r\"
-cmd add eshop %gui%[\"content\"] = \"§e§lsεℓεcт αη εηcнαηтмεηт§r\"
-cmd add eshop %opt0%[\"text\"] = \"§c§lCancel§r\"
-cmd add eshop %opt1%[\"text\"] = \"§6§lFire Protection§r\"
-cmd add eshop %opt2%[\"text\"] = \"§8§lBlast Protection§r\"
-cmd add eshop %opt3%[\"text\"] = \"§e§lProjectile Protection§r\"
-cmd add eshop %opt4%[\"text\"] = \"§b§lUnbreaking§r\"
-cmd add eshop %opt5%[\"text\"] = \"§l§aKnockback§r\"
-cmd add eshop %opt6%[\"text\"] = \"§d§lProtection§r\"
-cmd add eshop %opt7%[\"text\"] = \"§4§lSmite§r\"
-cmd add eshop %opt8%[\"text\"] = \"§6§lPunch§r\"
-cmd add eshop %opt9%[\"text\"] = \"§a§lPower§r\"
-cmd add eshop %opt10%[\"text\"] = \"§c§lFire §6Aspect§r\"
-cmd add eshop %opt11%[\"text\"] = \"§e§lEfficiency§r\"
+cmd add eshop %gui%[\"title\"] = \"§6Enchantment UI 0.1.0 §cBeta\"
+cmd add eshop %gui%[\"content\"] = \"§6Select a enchantment to continue.\"
+cmd add eshop %opt0%[\"text\"] = \"§cExit§r\"
+cmd add eshop %opt1%[\"text\"] = \"§6Sharpness\"
+cmd add eshop %opt2%[\"text\"] = \"§6Efficiency\"
+cmd add eshop %opt3%[\"text\"] = \"§6Protection\"
+cmd add eshop %opt4%[\"text\"] = \"§cComing Soon.\"
+cmd add eshop %opt5%[\"text\"] = \"§cComing Soon.\"
+cmd add eshop %opt6%[\"text\"] = \"§cComing Soon.\"
+cmd add eshop %opt7%[\"text\"] = \"§cComing Soon.\"
+cmd add eshop %opt8%[\"text\"] = \"§cComing Soon.\"
+cmd add eshop %opt9%[\"text\"] = \"§cComing Soon.\"
+cmd add eshop %opt10%[\"text\"] = \"§cComing Soon.\"
+cmd add eshop %opt11%[\"text\"] = \"§cComing Soon.\"
 cmd add eshop %buttons%[] = %opt0%
 cmd add eshop %buttons%[] = %opt1%
 cmd add eshop %buttons%[] = %opt2%
@@ -35,50 +35,68 @@ cmd add eshop if %response% = 0 then exit
 cmd add eshop if %response% = 1 then goto 100
 cmd add eshop if %response% = 2 then goto 200
 cmd add eshop if %response% = 3 then goto 300
-cmd add eshop if %response% = 4 then goto 400
-cmd add eshop if %response% = 5 then goto 500
-cmd add eshop if %response% = 6 then goto 600
-cmd add eshop if %response% = 7 then goto 700
-cmd add eshop if %response% = 8 then goto 800
-cmd add eshop if %response% = 9 then goto 900
-cmd add eshop if %response% = 10 then goto 1000
-cmd add eshop if %response% = 11 then goto 1100
+cmd add eshop if %response% = 4 then /eshop
+cmd add eshop if %response% = 5 then /eshop
+cmd add eshop if %response% = 6 then /eshop
+cmd add eshop if %response% = 7 then /eshop
+cmd add eshop if %response% = 8 then /eshop
+cmd add eshop if %response% = 9 then /eshop
+cmd add eshop if %response% = 10 then goto /eshop
+cmd add eshop if %response% = 11 then goto /eshop
 cmd add eshop exit
 cmd insert eshop 100 %gui1%[\"type\"] = \"form\"
-cmd add eshop %gui1%[\"title\"] = \"§6§lFire Protection§r\"
-cmd add eshop %gui1%[\"content\"] = \"§lSelect a Level§r\"
-cmd add eshop %cancel%[\"text\"] = \"§c§lCancel§r\"
-cmd add eshop %level1%[\"text\"] = \"§6§lFire Protection Level IV §r- §fFree§r\"
+cmd add eshop %gui1%[\"title\"] = \"§6Sharpness\"
+cmd add eshop %gui1%[\"content\"] = \"§6Select a enchantment level. \\n§r\\n§c§lWARNING§r §dMake sure to hold the item you want to enchant before enchanting or you will lose the enchant and your money!\"
+cmd add eshop %cancel%[\"text\"] = \"§cBack\"
+cmd add eshop %level1%[\"text\"] = \"§6Sharpness 3 - §d(25000$)\"
 cmd add eshop %levels1%[] = %cancel%
 cmd add eshop %levels1%[] = %level1%
 cmd add eshop %gui1%[\"buttons\"] = %levels1%
 cmd add eshop %response1% = dialog(%player%, %gui1%)
 cmd add eshop if varset(%response1%) = %false% then exit
-cmd add eshop if %response1% = 0 then exit
+cmd add eshop if %response1% = 0 then /eshop
 cmd add eshop if %response1% = 1 then goto 125
 cmd add eshop exit
-cmd insert eshop 125 ascon /enchant %p% fire_protection 4
+cmd insert eshop 125 %bal% = playerbalance(%p%)
+cmd insert eshop 126 if %bal% < 25000 then message %p% §d§lM§cN §e|§r§6 You do not have enough money to buy §dSharpness III§6.
+cmd insert eshop 127 if %bal% < 25000 then exit
+cmd insert eshop 128 if %bal% = 25000 then message %p% §d§lM§cN §e|§r§6 You successfully bought and enchanted your item with §dSharpness III§6!
+cmd insert eshop 129 if %bal% = 25000 then goto 133
+cmd insert eshop 130 if %bal% > 25000 then message %p% §d§lM§cN §e|§r§6 You successfully bought and enchanted your item with §dSharpness III§6!
+cmd insert eshop 131 if %bal% > 25000 then goto 133
+cmd insert eshop 132 exit
+cmd insert eshop 133 ascon /enchant %p% sharpness 3
+cmd insert eshop 134 asop /pay sipancoolboy 25000
 cmd add eshop exit
 cmd insert eshop 200 %gui2%[\"type\"] = \"form\"
-cmd add eshop %gui2%[\"title\"] = \"§8§lBlast Protection§r\"
-cmd add eshop %gui2%[\"content\"] = \"§lSelect a Level§r\"
-cmd add eshop %cancel%[\"text\"] = \"§c§lCancel§r\"
-cmd add eshop %level1%[\"text\"] = \"§8§lBlast Protection Level IV §r- §fFree§r\"
+cmd add eshop %gui2%[\"title\"] = \"§6Efficiency\"
+cmd add eshop %gui2%[\"content\"] = \"§6Select a enchantment level. \\n§r\\n§c§lWARNING§r §dMake sure to hold the item you want to enchant before enchanting or you will lose the enchant and your money!\"
+cmd add eshop %cancel%[\"text\"] = \"§cBack§r\"
+cmd add eshop %level1%[\"text\"] = \"§6Efficiency 4 - §d(30000$)\"
 cmd add eshop %levels2%[] = %cancel%
 cmd add eshop %levels2%[] = %level1%
 cmd add eshop %gui2%[\"buttons\"] = %levels2%
 cmd add eshop %response2% = dialog(%player%, %gui2%)
 cmd add eshop if varset(%response2%) = %false% then exit
-cmd add eshop if %response2% = 0 then exit
+cmd add eshop if %response2% = 0 then /eshop
 cmd add eshop if %response2% = 1 then goto 225
 cmd add eshop exit
-cmd insert eshop 225 ascon /enchant %p% blast_protection 4
+cmd insert eshop 225 %bal% = playerbalance(%p%)
+cmd insert eshop 226 if %bal% < 30000 then message %p% §d§lM§cN §e|§r§6 You do not have enough money to buy §dEfficiency IV§6.
+cmd insert eshop 227 if %bal% < 30000 then exit
+cmd insert eshop 228 if %bal% = 30000 then message %p% §d§lM§cN §e|§r§6 You successfully bought and enchanted your item with §dEfficiency IV§6!
+cmd insert eshop 229 if %bal% = 30000 then goto 233
+cmd insert eshop 230 if %bal% > 30000 then message %p% §d§lM§cN §e|§r§6 You successfully bought and enchanted your item with §dEfficiency IV§6!
+cmd insert eshop 231 if %bal% > 30000 then goto 233
+cmd insert eshop 232 exit
+cmd insert eshop 233 ascon /enchant %p% efficiency 4
+cmd insert eshop 234 asop /pay sipancoolboy 30000
 cmd add eshop exit
 cmd insert eshop 300 %gui3%[\"type\"] = \"form\"
-cmd add eshop %gui3%[\"title\"] = \"§e§lProjectile Protection§r\"
-cmd add eshop %gui3%[\"content\"] = \"§lChoose a Level§r\"
-cmd add eshop %cancel%[\"text\"] = \"§c§lCancel§r\"
-cmd add eshop %level1%[\"text\"] = \"§e§lProjectile Protection Level IV §r- §fFree§r\"
+cmd add eshop %gui3%[\"title\"] = \"§6Protection\"
+cmd add eshop %gui3%[\"content\"] = \"§6Select a enchantment level. \\n§r\\n§c§lWARNING§r §dMake sure to hold the item you want to enchant before enchanting or you will lose the enchant and your money!\"
+cmd add eshop %cancel%[\"text\"] = \"§cBack\"
+cmd add eshop %level1%[\"text\"] = \"§6Protection 2 - §d(15000$)\"
 cmd add eshop %levels3%[] = %cancel%
 cmd add eshop %levels3%[] = %level1%
 cmd add eshop %gui3%[\"buttons\"] = %levels3%
@@ -87,7 +105,16 @@ cmd add eshop if varset(%response3%) = %false% then exit
 cmd add eshop if %response3% = 0 then exit
 cmd add eshop if %response3% = 1 then goto 325
 cmd add eshop exit
-cmd add eshop ascon /enchant %p% projectile_protection 4
+cmd insert eshop 325 %bal% = playerbalance(%p%)
+cmd insert eshop 326 if %bal% < 15000 then message %p% §d§lM§cN §e|§r§6 You do not have enough money to buy §dProtection II§6.
+cmd insert eshop 327 if %bal% < 15000 then exit
+cmd insert eshop 328 if %bal% = 15000 then message %p% §d§lM§cN §e|§r§6 You successfully bought and enchanted your item with §dProtection II§6!
+cmd insert eshop 329 if %bal% = 15000 then goto 333
+cmd insert eshop 330 if %bal% > 15000 then message %p% §d§lM§cN §e|§r§6 You successfully bought and enchanted your item with §dProtection II§6!
+cmd insert eshop 331 if %bal% > 15000 then goto 333
+cmd insert eshop 332 exit
+cmd insert eshop 333 ascon /enchant %p% protection 2
+cmd insert eshop 334 asop /pay sipancoolboy 15000
 cmd add eshop exit
 cmd insert eshop 400 %gui4%[\"type\"] = \"form\"
 cmd add eshop %gui4%[\"title\"] = \"§b§lUnbreaking§r\"
