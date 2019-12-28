@@ -1,6 +1,5 @@
 #REPAIR
 cmd create repair BETA> Repair UI 0.1.0
-cmd add repair %money% = playerbalance(%p%)
 cmd add repair %player% = %p%
 cmd add repair %gui%[\"type\"] = \"form\"
 cmd add repair %gui%[\"title\"] = \"§6Repair UI 0.1.0 §cBeta\"
@@ -28,12 +27,13 @@ cmd add repair if varset(%response1%) = %false% then exit
 cmd add repair if %response1% = 5000 then exit
 cmd add repair if %response1% = 1 then goto 126
 cmd add repair exit
-cmd insert repair 126 if %money% < 5000 then message %player% §d§lM§cN §e|§r §6You don't have enough money to repair your item.
+cmd insert repair 126 %money% = playerbalance(%p%)
+cmd add repair if %money% < 5000 then message %player% §d§lM§cN §e|§r §6You don't have enough money to repair your item.
 cmd add repair if %money% < 5000 then exit
 cmd add repair if %money% > 5000 then message %p% §d§lM§cN §e|§r §6Successfully repaired!
 cmd add repair if %money% = 5000 then message %p% §d§lM§cN §e|§r §6Successfully repaired!
 cmd add repair ascon /takemoney %player% 5000
-cmd add repair /fix
+cmd add repair asop /cmd run fix
 cmd add repair exit
 #FIX
 cmd create fix BETA> Repair your tools! (Hold them first.)
