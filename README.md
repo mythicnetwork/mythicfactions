@@ -1,6 +1,7 @@
 # Mythic Network Factions
 
-The Official Mythic Network Factions Coding Repository.
+
+The Official Coding Repository of Mythic Network Factions.
 
 This is the dev branch and upcoming features are uploaded here.
 
