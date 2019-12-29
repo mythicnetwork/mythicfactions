@@ -1,0 +1,3 @@
+motd add §d§lMythic §cNetwork §6» §6Factions §cBeta§6!
+motd add §d§lMythic §cNetwork §6» §6Welcome!
+motd add §d§lMythic §cNetwork §6» §6Factions is now OUT!
