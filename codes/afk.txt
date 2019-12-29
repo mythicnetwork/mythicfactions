@@ -1,5 +1,5 @@
 cmd create afk AFK Status Command
-cmd add afk if %args%[1] = ("reset") then goto 100
+cmd add afk if %args%[1] = (\"reset\") then goto 100
 cmd add afk load %afk%
 cmd add afk if varset(%afk%[%p%]) then message %p% §6You can't do /afk two times!
 cmd add afk if varset(%afk%[%p%]) then exit
