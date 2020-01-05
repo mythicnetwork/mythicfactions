@@ -8,8 +8,9 @@ cmd edit jm 6 exit
 cmd edit jm 7 message onlineplayers() §d§lM§cN§r §6+ §e§l| §d%p%
 cmd edit jm 8 exit
 cmd edit jm 9 message onlineplayers() §d§lM§cN§r §6+ §e§l| §c%pgrp% §d%p%
+cmd edit jm 10 boss create logo
 cmd edit jm 11 boss health logo 1
-cmd edit jm 12 let %bar% = \"§d§lMythic §cNetwork §6Factions\"
+cmd edit jm 12 let %bar% = \"       §d§lMythic §cNetwork\\n§r\\n§6§lFactions §cBeta 0.2.0\"
 cmd edit jm 13 boss show logo onlineplayers()
 cmd edit jm 14 boss title logo %bar%
 cmd edit jm 15 exit
