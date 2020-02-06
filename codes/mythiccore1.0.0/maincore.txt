@@ -1,4 +1,6 @@
 cmd create core Mythic Core
+cmd trigger startup core
+cmd unregister core
 cmd add core message onlineplayers() The Mythic Core is initializing start up.
 cmd add core sleep 4
 cmd add core message onlineplayers() The Mythic Core is now loading services.
