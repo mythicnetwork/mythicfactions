@@ -1,4 +1,5 @@
 cmd create cl §eClear lagg.
+cmd unregister cl
 cmd add cl message onlineplayers() §6ClearLagg §8§l>§r §6Clearing entities in 10 minutes.
 cmd add cl sleep 300
 cmd add cl message onlineplayers() §6ClearLagg §8§l>§r §6Clearing entities in 5 minutes.
