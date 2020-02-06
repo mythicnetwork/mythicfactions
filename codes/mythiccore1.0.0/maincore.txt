@@ -4,7 +4,7 @@ cmd unregister core
 cmd add core let %option% = %args%[1]
 cmd add core if %option% = \"\" then message %p% Please try one of these options: start, shut, info
 cmd add core if %option% = \"start\" then goto 7
-cmd add core if %option% = \"info\" then message %p% Mythic Core Info: version 1.0.0, kernel 0.1.1, services bundled, BETA compiler by NikosProGamer
+cmd add core if %option% = \"info\" then message %p% Mythic Core Info: version MTH-1.0.0snapshot\\n \\nServices bundled within its code.\\nMTH Snapshot Package coded by NikosProGamer.
 cmd add core if %option% = \"shut\" then asop /cmd run shutcore
 cmd add core exit
 cmd add core message onlineplayers() The Mythic Core is initializing start up.
@@ -80,10 +80,26 @@ cmd add core message onlineplayers() Mythic Core | Loaded Custom Kill Messages s
 cmd add core let %discord_message% = \"**```Mythic Core | Loaded Custom Kill Messages system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core sleep 2
-cmd add core message onlineplayers() Mythic Core | Loading Custom HUD system Service.
-cmd add core let %discord_message% = \"**```Mythic Core | Loading Spawners system Service.```**\"
+cmd add core message onlineplayers() Mythic Core | Loading Custom HUDSync system Service.
+cmd add core let %discord_message% = \"**```Mythic Core | Loading Custom HUDSync system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run chud
-cmd add core message onlineplayers() Mythic Core | Loaded Custom HUD system service.
-cmd add core let %discord_message% = \"**```Mythic Core | Loaded Custom HUD system Service.```**\"
+cmd add core message onlineplayers() Mythic Core | Loaded Custom HUDSync system service.
+cmd add core let %discord_message% = \"**```Mythic Core | Loaded Custom HUDSync system Service.```**\"
+cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
+cmd add core sleep 2
+cmd add core message onlineplayers() Mythic Core | Loading MOTDSync system Service.
+cmd add core let %discord_message% = \"**```Mythic Core | Loading MOTDSync system Service.```**\"
+cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
+cmd add core ascon /cmd run chud
+cmd add core message onlineplayers() Mythic Core | Loaded MOTDSync system service.
+cmd add core let %discord_message% = \"**```Mythic Core | Loaded MOTDSync system Service.```**\"
+cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
+cmd add core sleep 2
+cmd add core message onlineplayers() Mythic Core | Loading MYTHICNETWORKSync system Service.
+cmd add core let %discord_message% = \"**```Mythic Core | Loading MYTHICNETWORKSync system Service.```**\"
+cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
+cmd add core ascon /cmd run chud
+cmd add core message onlineplayers() Mythic Core | Loaded MYTHICNETWORKSync system service.
+cmd add core let %discord_message% = \"**```Mythic Core | Loaded MYTHICNETWORKSync system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
