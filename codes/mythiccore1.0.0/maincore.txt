@@ -1,0 +1,1 @@
+cmd create core Mythic Core
