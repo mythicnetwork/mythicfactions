@@ -1,1 +1,29 @@
 cmd create core Mythic Core
+cmd add core message onlineplayers() The Mythic Core is initializing start up.
+cmd add core sleep 4
+cmd add core message onlineplayers() The Mythic Core is now loading services.
+cmd add core sleep 2
+cmd add core message onlineplayers() Mythic Core | Loading Crate Manager Service.
+cmd add core ascon /cmd run cratemngr
+cmd add core message onlineplayers() Mythic Core | Loaded Crate Manager Service.
+cmd add core sleep 2
+cmd add core message onlineplayers() Mythic Core | Loading Bossbar system Service.
+cmd add core ascon boss create logo
+cmd add core message onlineplayers() Mythic Core | Loaded Bossbar system Service.
+cmd add core sleep 2
+cmd add core message onlineplayers() Mythic Core | Loading Broadcasts Service.
+cmd add core ascon /cmd run bc
+cmd add core message onlineplayers() Mythic Core | Loaded Broadcasts Service.
+cmd add core sleep 2
+cmd add core message onlineplayers() Mythic Core | Loading Discord-based report Service.
+cmd add core ascon /cmd run dsr
+cmd add core message onlineplayers() Mythic Core | Loaded Discord-based report Service.
+cmd add core sleep 2
+cmd add core message onlineplayers() Mythic Core | Loading ClearLagg system Service.
+cmd add core ascon /cmd run cl
+cmd add core message onlineplayers() Mythic Core | Loaded ClearLagg system Service.
+cmd add core sleep 2
+cmd add core message onlineplayers() Mythic Core | Loading Join & Leave Messages system Service.
+cmd add core ascon /cmd run jm
+cmd add core ascon /cmd run lm
+cmd add core message onlineplayers() Mythic Core | Loaded Join & Leave Messages system Service.
