@@ -10,9 +10,9 @@ cmd edit mtd 111 %con%[] = %i1%
 cmd edit mtd 112 %form%[\"content\"] = %con%
 cmd edit mtd 113 %response% = dialog(%p%, %form%)
 cmd edit mtd 114 %msg% = %response%[0]
-cmd edit mtd 115 if varset(%bug%) then goto 117
+cmd edit mtd 115 if varset(%msg%) then goto 117
 cmd edit mtd 116 exit
-cmd edit mtd 117 %discord_message% = %p% +\": \" + %msg%
+cmd edit mtd 117 let %discord_message% = \"**```Player: \" + %player% + \": \" + %msg% + \"```**\"
 cmd edit mtd 118 let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=675352962796748810&token=f3jGc-PCVIH9AzI62MCZqNu8N2Ae9K3qhbB2HO8KBjM9tGKSSpW-Q2mYYQp1Vl88UCcs&message=\" + urlencode(%discord_message%))
 cmd edit mtd 119 message %p% §d§lMythic §cNetwork§6 »§r§6 You reported this bug: §d%msg%§6. Thanks for making our job easier!
 cmd edit mtd 120 exit
