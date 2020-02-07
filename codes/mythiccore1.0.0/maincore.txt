@@ -9,6 +9,7 @@ cmd add core if %option% = \"start\" then goto 9
 cmd add core if %option% = \"info\" then message %p% Mythic Core Info: version MTH-1.0.0snapshot\\n \\nServices bundled within its code.\\nMTH Snapshot Package coded by NikosProGamer.
 cmd add core if %option% = \"shut\" then asop /cmd run shutcore
 cmd add core exit
+cmd add core %current-time% = %time%
 cmd add core message onlineplayers() The Mythic Core is initializing start up.
 cmd add core let %discord_message% = \"**```The Mythic Core is initializing start up.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
@@ -104,4 +105,8 @@ cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?
 cmd add core ascon /cmd run chud
 cmd add core message onlineplayers() Mythic Core | Loaded MYTHICNETWORKSync system service.
 cmd add core let %discord_message% = \"**```Mythic Core | Loaded MYTHICNETWORKSync system Service.```**\"
+cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
+cmd add core %total-time% = %time% - %current-time%
+cmd add core message onlineplayers() The Mythic Core took %total-time% to load all services and systems.
+cmd add core let %discord_message% = \"**```The Mythic Core took \" + %total-time% + \"to load all services and systems.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
