@@ -1,10 +1,11 @@
 cmd create servers Server Selector
+cmd add servers sync
 cmd add servers %player% = %p%
 cmd add servers %gui%[\"type\"] = \"form\"
 cmd add servers %gui%[\"title\"] = \"§6Network Selector\"
 cmd add servers %gui%[\"content\"] = \"§6Select one of §d§lMythic§r§6's servers to play!\"
-cmd add servers %button0%[\"text\"] = \"§6KitPvP 1.1.0\"
-cmd add servers %button1%[\"text\"] = \"§6Factions §cBeta§6 (You're here!)\"
+cmd add servers %button0%[\"text\"] = \"§6KitPvP - §d§l§oMYTHIC SERVERS\"
+cmd add servers %button1%[\"text\"] = \"§6Factions §cBeta§6 - §d§l§oMYTHIC SERVERS (You're here!)\"
 cmd add servers %button2%[\"text\"] = \"§6Mysterious...\"
 cmd add servers %button3%[\"text\"] = \"§c§lExit\"
 cmd add servers %buttons%[] =%button0%
@@ -17,3 +18,4 @@ cmd add servers if %response% = 0 then /transferserver mythicpvp.pocket.pe 16859
 cmd add servers if %response% = 1 then message %p% §6You're here on Factions!
 cmd add servers if %response% = 2 then message %p% §6Something mysterious is going on...
 cmd add servers if %response% = 3 then exit
+cmd add servers exit
