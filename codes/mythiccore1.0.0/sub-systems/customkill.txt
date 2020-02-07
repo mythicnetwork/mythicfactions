@@ -1,8 +1,8 @@
 cmd create customkill Custom Kill Messages System
 cmd unregister customkill
 cmd trigger death customkill
-cmd add customkill let %args%[2] = %dead%
-cmd add customkill let %args%[3] = %killer%
-cmd add customkill let %args%[5] = %weapon%
-cmd add customkill message onlineplayers() §d§lM§cN §e|§r §6%killer% §dkilled §6%dead% §dusing §6%weapon%§d!
-cmd add customkill exit
+cmd edit 1 customkill %args%[2] = %dead%
+cmd edit 2 customkill %args%[3] = %killer%
+cmd edit 3 customkill %args%[5] = %weapon%
+cmd edit 4 customkill message onlineplayers() §d§lM§cN §e|§r §6%killer% §dkilled §6%dead% §dusing §6%weapon%§d!
+cmd edit 5 customkill exit
