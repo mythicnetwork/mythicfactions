@@ -1,8 +1,8 @@
 #REPAIR
-cmd create repair BETA> Repair UI 0.1.0
+cmd create repair Repair UI
 cmd add repair %player% = %p%
 cmd add repair %gui%[\"type\"] = \"form\"
-cmd add repair %gui%[\"title\"] = \"§6Repair UI 0.1.0 §cBeta\"
+cmd add repair %gui%[\"title\"] = \"§6§lRepair UI 0.1.0\"
 cmd add repair %gui%[\"content\"] = \"§6Select the repair option below to continue.\"
 cmd add repair %opt0%[\"text\"] = \"§cExit\"
 cmd add repair %opt1%[\"text\"] = \"§6Repair\"
