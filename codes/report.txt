@@ -4,8 +4,8 @@ cmd edit report 2 %player% = %p%
 cmd edit report 3 %gui%[\"type\"] = \"form\"
 cmd edit report 4 %gui%[\"title\"] = \"§6Report UI 2.0.0\"
 cmd edit report 5 %gui%[\"content\"] = \"§6What would you like to report?\"
-cmd edit report 6 %button0%[\"text\"] = \"§dA player\"
-cmd edit report 7 %button1%[\"text\"] = \"§dA bug\"
+cmd edit report 6 %button0%[\"text\"] = \"§dA player.\"
+cmd edit report 7 %button1%[\"text\"] = \"§dA bug.\"
 cmd edit report 8 %button2%[\"text\"] = \"§cExit\"
 cmd edit report 9 %buttons%[] = %button0%
 cmd edit report 10 %buttons%[] = %button1%
@@ -37,7 +37,7 @@ cmd edit report 63 %name% = %all%[%index%]
 cmd edit report 64 %reason% = %response%[1]
 cmd edit report 65 if varset(%name%) and varset(%reason%) then goto 69
 cmd edit report 68 exit
-cmd edit report 69 %discord_message% = \"**Player Report |** \" + %p% + \" reported \" +%name% + \" for \" + %reason% + \".\"
+cmd edit report 69 %discord_message% = \"**Player Report |** \" + %p% + \" reported \" + %name% + \" for \" + %reason% + \".\"
 cmd edit report 70 %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=656903455314673695&token=T9pQ0GOUCiUQyaxzjIeLnaTDJg5PfoCkwXM3E1RVa1pLLxRAtH-mTWpn3g74gYxOpJHY&message=\" + urlencode(%discord_message%))
 cmd edit report 71 message %p% §d§lMythic §cNetwork§6 »§r§6 You reported §d%name%§6 for §d%reason%§6. Thanks for making the network safer!
 cmd edit report 72 ascon /cmd add reports %p% reported %name% for %reason%.
@@ -46,7 +46,7 @@ cmd edit report 103 #BUG
 cmd edit report 104 %all% = onlineplayers()
 cmd edit report 105 %player% = %p% 
 cmd edit report 106 %form%[\"type\"] = \"custom_form\"
-cmd edit report 107 %form%[\"title\"] = \"§6Report a bug\"
+cmd edit report 107 %form%[\"title\"] = \"§6Bug Report\"
 cmd edit report 108 %i1%[\"type\"] = \"input\"
 cmd edit report 109 %i1%[\"text\"] = \"§6Describe your bug below.\"
 cmd edit report 110 %i1%[\"placeholder\"] = \"§6Type here...\"
