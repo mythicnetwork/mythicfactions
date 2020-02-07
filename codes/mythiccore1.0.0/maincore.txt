@@ -107,6 +107,6 @@ cmd add core message onlineplayers() Mythic Core | Loaded MYTHICNETWORKSync syst
 cmd add core let %discord_message% = \"**```Mythic Core | Loaded MYTHICNETWORKSync system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core %total-time% = %time% - %current-time%
-cmd add core message onlineplayers() The Mythic Core took %total-time% to load all services and systems.
-cmd add core let %discord_message% = \"**```The Mythic Core took \" + %total-time% + \"to load all services and systems.```**\"
+cmd add core message onlineplayers() The Mythic Core took %total-time% seconds to load all services and systems.
+cmd add core let %discord_message% = \"**```The Mythic Core took \" + %total-time% + \"seconds to load all services and systems.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
