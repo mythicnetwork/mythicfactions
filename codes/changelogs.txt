@@ -1,10 +1,11 @@
 cmd create changelogs Check whats added in the latest patch
 cmd add changelogs %player% = %p%
 cmd add changelogs %gui%[\"type\"] = \"form\"
-cmd add changelogs %gui%[\"title\"] = \"§6What's new in §4§l0.1.1-beta§r§6!\"
-cmd add changelogs %gui%[\"content\"] = \"§6§lNEW FEATURES\\n§r\\n§6- §dAdded Crates! You can open them with a trapped chest or using the chest at spawn. You can get keys from voting!\\n§r\\n§6- §dAdded Spawners! You can buy them from spawn and using /ss! \\n§r\\n§6- §dAdded A new kit to the Kits UI! Its name is §c§lOVERLORD§r §dkit! You can buy it for 50,000$ at the Kits UI or win it from a Crate!\\n§r\\n§6- §dAdded Health Stats! You can now see the health of a player above them!\\n§r\\n§6- §dAdded Auto Smelt! Now whatever ore you mine, it will be automatically smelted!\\n§r\\n§d§lBUG FIXES\\n§r\\n§6- §dFixed issues with inside Core.\\n§r\\n§6- Renamed /version to /v cause of internal errors.\"
+cmd add changelogs %gui%[\"title\"] = \"§6What's new in §4§l0.3.0§r§6!\"
+cmd add changelogs %gui%[\"content\"] = \"§6§lNEW FEATURES\\n§r\\n§6- §dIntroducing the all-new Mythic Core! The new core will make sure all services and systems run on startup successfully and optimises services to best status.\\n§r\\n§6- §dThe old Mythic Core has been renamed to Mythic UI just because it's a simple UI that lists all available features.\\n§r\\n§6- §dEverything has been re-worked. Welcome to the new Mythic Network 1.0.§r\\n§d§lBUG FIXES\\n§r\\n§6- §dFixed issues with inside Core.\\n§r\\n§6- §dFixed alot of issues with commands.\\n§r\\n§6- §dSynchronized some asynchronized tasks that caused extreme lag.\"
 cmd add changelogs %button0%[\"text\"] = \"§cExit\"
 cmd add changelogs %buttons%[] = %button0%
 cmd add changelogs %gui%[\"buttons\"] = %buttons%
 cmd add changelogs %response% = dialog(%player%, %gui%)
 cmd add changelogs if %response% = 0 then exit
+cmd add changelogs exit
