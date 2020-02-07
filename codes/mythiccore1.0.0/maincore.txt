@@ -1,9 +1,11 @@
 cmd create core Mythic Core
 cmd trigger startup core
 cmd unregister core
+cmd add core let %player% = %p%
+cmd add core if %p% = \"CONSOLE\" then goto 9
 cmd add core let %option% = %args%[1]
 cmd add core if %option% = \"\" then message %p% Please try one of these options: start, shut, info
-cmd add core if %option% = \"start\" then goto 7
+cmd add core if %option% = \"start\" then goto 9
 cmd add core if %option% = \"info\" then message %p% Mythic Core Info: version MTH-1.0.0snapshot\\n \\nServices bundled within its code.\\nMTH Snapshot Package coded by NikosProGamer.
 cmd add core if %option% = \"shut\" then asop /cmd run shutcore
 cmd add core exit
