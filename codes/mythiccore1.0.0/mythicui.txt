@@ -56,4 +56,16 @@ cmd edit m 54 if %response% = 13 then /network
 cmd edit m 55 if %response% = 14 then /v
 cmd edit m 56 if %response% = 15 then /stats
 cmd edit m 57 if %response% = 16 then exit
-cmd edit m 58 exit
+cmd edit m 58 let %args%[1] = %option%
+cmd edit m 59 if %option% = \"info\" then goto 61
+cmd edit m 60 exit
+cmd edit m 61 %player% = %p%
+cmd edit m 62 %gui%[\"type\"] = \"form\"
+cmd edit m 63 %gui%[\"title\"] = \"§d§lMythic §6UI Info\"
+cmd edit m 64 %gui%[\"content\"] = \"§6Mythic UI info: §dversion 1.0.0MTH\\n§dServices bundled within code, running on Mythic Core Snapshot MTH-1.0.0.\\n§6Made by NikosProGamer\"
+cmd edit m 65 %button0%[\"text\"] = \"§cExit\"
+cmd edit m 66 %buttons%[] = %button0%
+cmd edit m 67 %gui%[\"buttons\"] = %buttons%
+cmd edit m 68 %response% = dialog(%player%, %gui%)
+cmd edit m 69 if %response% = 0 then exit
+cmd edit m 70 exit
