@@ -99,9 +99,9 @@ cmd add kits ascon /give %p% gold_axe 1
 cmd add kits exit
 cmd add kits #OverloadKit(MONEY)
 cmd add kits let %money% = playerbalance(%p%)
-cmd add kits if %money% > 50000 then goto 103
-cmd add kits if %money% = 50000 then goto 103
-cmd add kits if %money% < 50000 then goto 101
+cmd add kits if %money% > 50000 then goto 106
+cmd add kits if %money% = 50000 then goto 106
+cmd add kits if %money% < 50000 then goto 104
 cmd add kits message %p% §d§lMythic §cNetwork §6»§r§d You don't have enough money to buy the §c§lOverlord §r§6kit!
 cmd add kits exit
 cmd add kits ascon /takemoney %p% 50000 
