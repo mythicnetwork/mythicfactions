@@ -11,3 +11,8 @@ Kind regards,
 
 The Mythic Network Development Head
 NikosProGamer
+
+Our discord:
+
+
+<iframe src="https://discordapp.com/widget?id=646390348943327242&theme=dark" width="350" height="500" allowtransparency="true" frameborder="0"></iframe>
