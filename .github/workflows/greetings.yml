@@ -1,0 +1,13 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/first-interaction@v1
+      with:
+        repo-token: ${{ secrets.GITHUB_TOKEN }}
+        issue-message: 'You just reported your first issue! Thanks for helping us with bugs & issues on the Mythic Network!'
+        pr-message: 'You just created your first pull request! Thanks for contributing to our codes and making them better!'
