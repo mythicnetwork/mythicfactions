@@ -1,7 +1,7 @@
 cmd create fui Factions UI
 cmd edit fui 1 %player% = %p%
 cmd edit fui 2 %gui%[\"type\"] = \"form\"
-cmd edit fui 3 %gui%[\"title\"] = \"§6§lFactions UI §r§d1.0.0-§4§lbeta\"
+cmd edit fui 3 %gui%[\"title\"] = \"§6§lFactions UI 1.0.0\"
 cmd edit fui 4 %gui%[\"content\"] = \"§6A plethora of features for Factions based on a UI.\"
 cmd edit fui 5 %button0%[\"text\"] = \"§d§lCreate a Faction\"
 cmd edit fui 6 %button1%[\"text\"] = \"§d§lInvite a Player\"
@@ -35,7 +35,8 @@ cmd edit fui 34 if %namef% = \" \" then exit
 cmd edit fui 34 exit
 cmd edit fui 35 /f create %namef%
 cmd edit fui 36 exit
-cmd edit fui 40 #INVITE
+cmd edit fui 39 #INVITE
+cmd edit fui 40 sync
 cmd edit fui 41 %all% = onlineplayers()
 cmd edit fui 42 %player% = %p% 
 cmd edit fui 43 %form%[\"type\"] = \"custom_form\"

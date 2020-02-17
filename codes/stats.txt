@@ -1,9 +1,10 @@
-cmd create stats Shows a person or players stats! 
+cmd create stats Shows a person or players stats!
 cmd add stats %player% = %args%[1]
 cmd add stats if %args%[1] = \"\" then let %player% = %p% 
 cmd add stats let %phand% = playerhand(%player%)
 cmd add stats let %bal% = playerbalance(%player%) 
 cmd add stats let %r% = playergroup(%player%)
+cmd add stats sync
 cmd add stats message %p% §d§lMythic §cNetwork§r §e| §6Loading Stats... 
 cmd add stats message %p% §d§lMythic §cNetwork§r §e| §6%player%'s Stats!
 cmd add stats message %p% §d§lMythic §cNetwork§r §e| §6Rank :§d %r%

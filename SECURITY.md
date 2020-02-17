@@ -4,12 +4,12 @@
 
 These are the current supported and non-supported versions of PocketMine-MP, a MC:BE Server Software made by dktapps.
 
-| Version | Supported          |
-| ------- | ------------------ |
-| 3.11.0  | :white_check_mark: |
-| 3.10.0  | :white_check_mark: |
-| 3.9.8dev| :white_check_mark: |
-| 4.0.0a  | :x:                |
+| Version | Supported         |
+| ------- | ----------------- |
+| 3.11.5  | ✔                |
+| 3.10.0  | ✔                |
+| 3.9.8dev| ✔                |
+| 4.0.0a  | ❌                |
 
 ## Reporting a Vulnerability
 
