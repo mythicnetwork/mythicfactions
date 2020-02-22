@@ -1,7 +1,7 @@
-cmd create afk AFK Status Command
+cmd create afk Switch to AFK or get out of AFK!
 cmd add afk if %args%[1] = (\"reset\") then goto 100
 cmd add afk load %afk%
-cmd add afk if varset(%afk%[%p%]) then message %p% §6You can't do /afk two times!
+cmd add afk if varset(%afk%[%p%]) then message %p% §d§lM§cN §e| §r§6You can't do /afk two times!
 cmd add afk if varset(%afk%[%p%]) then exit
 cmd add afk let %xx% = %x%
 cmd add afk let %yy% = %y%
@@ -36,4 +36,4 @@ cmd edit afk 99 exit
 cmd add afk load %afk%
 cmd add afk let %afk%[%p%] =
 cmd add afk save %afk%
-cmd add afk message %p% §6Successfully reset your AFK status!
+cmd add afk message %p% §d§lM§cN §e| §r§6Successfully reset your AFK status!
