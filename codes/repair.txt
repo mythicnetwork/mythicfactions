@@ -2,23 +2,23 @@
 cmd create repair Repair UI
 cmd add repair %player% = %p%
 cmd add repair %gui%[\"type\"] = \"form\"
-cmd add repair %gui%[\"title\"] = \"§6§lRepair UI 1.0.0\"
-cmd add repair %gui%[\"content\"] = \"§6Select the repair option below to continue.\"
-cmd add repair %opt0%[\"text\"] = \"§cExit\"
-cmd add repair %opt1%[\"text\"] = \"§6Repair\"
+cmd add repair %gui%[\"title\"] = \"§6§lRepair your equipment!\"
+cmd add repair %gui%[\"content\"] = \"§dSelect the repair option below to continue.\"
+cmd add repair %opt0%[\"text\"] = \"§6§lRepair\"
+cmd add repair %opt1%[\"text\"] = \"§c§lExit\"
 cmd add repair %buttons%[] = %opt0%
 cmd add repair %buttons%[] = %opt1%
 cmd add repair %gui%[\"buttons\"] = %buttons%
 cmd add repair %response% = dialog(%player%, %gui%)
 cmd add repair if varset(%response%) = %false% then exit
-cmd add repair if %response% = 0 then exit
-cmd add repair if %response% = 1 then goto 100
+cmd add repair if %response% = 0 then goto 100
+cmd add repair if %response% = 1 then exit
 cmd add repair exit
 cmd insert repair 100 %gui1%[\"type\"] = \"form\"
 cmd add repair %gui1%[\"title\"] = \"§6Repair Confirmation\"
 cmd add repair %gui1%[\"content\"] = \"§6Make sure you are holding the correct item and not a different one as if you make a mistake, we won't refund your money!\"
 cmd add repair %cancel%[\"text\"] = \"§cCancel\"
-cmd add repair %level1%[\"text\"] = \"§6Repair - §d(5000$)\"
+cmd add repair %level1%[\"text\"] = \"§6Repair - §d5,000$\"
 cmd add repair %levels1%[] = %cancel%
 cmd add repair %levels1%[] = %level1%
 cmd add repair %gui1%[\"buttons\"] = %levels1%
