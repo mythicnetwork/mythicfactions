@@ -6,7 +6,7 @@ cmd add core if %p% = \"CONSOLE\" then goto 9
 cmd add core let %option% = %args%[1]
 cmd add core if %option% = \"\" then message %p% Please try one of these options: start, shut, info
 cmd add core if %option% = \"start\" then goto 9
-cmd add core if %option% = \"info\" then message %p% Mythic Core Info: version MTH-1.0.0snapshot. Services bundled within its code. MTH Snapshot Package coded by NikosProGamer.
+cmd add core if %option% = \"info\" then message %p% Mythic Core Info: version MTH-1.1.0. Services bundled within its code. MTH Package coded by NikosProGamer.
 cmd add core if %option% = \"shut\" then asop /cmd run shutcore
 cmd add core exit
 cmd add core %current-time% = %time%
