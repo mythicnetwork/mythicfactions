@@ -1,12 +1,12 @@
 cmd create fui Factions UI
 cmd edit fui 1 %player% = %p%
 cmd edit fui 2 %gui%[\"type\"] = \"form\"
-cmd edit fui 3 %gui%[\"title\"] = \"§6§lFactions UI 1.0.0\"
-cmd edit fui 4 %gui%[\"content\"] = \"§6A plethora of features for Factions based on a UI.\"
-cmd edit fui 5 %button0%[\"text\"] = \"§d§lCreate a Faction\"
-cmd edit fui 6 %button1%[\"text\"] = \"§d§lInvite a Player\"
-cmd edit fui 7 %button2%[\"text\"] = \"§d§lGo to your Faction Home\"
-cmd edit fui 8 %button3%[\"text\"] = \"§cExit\"
+cmd edit fui 3 %gui%[\"title\"] = \"§6§lFactions UI\"
+cmd edit fui 4 %gui%[\"content\"] = \"§dA simple UI that contains a plethora of features for Factions.\"
+cmd edit fui 5 %button0%[\"text\"] = \"§6§lCreate a Faction!\"
+cmd edit fui 6 %button1%[\"text\"] = \"§6§lInvite a player to your Faction!\"
+cmd edit fui 7 %button2%[\"text\"] = \"§6§Teleport to Faction base!\"
+cmd edit fui 8 %button3%[\"text\"] = \"§c§lExit\"
 cmd edit fui 9 %buttons%[] =%button0%
 cmd edit fui 10 %buttons%[] = %button1%
 cmd edit fui 11 %buttons%[] = %button2%
@@ -22,10 +22,10 @@ cmd edit fui 20 #CREATE
 cmd edit fui 21 %all% = onlineplayers()
 cmd edit fui 22 %player% = %p% 
 cmd edit fui 23 %form%[\"type\"] = \"custom_form\"
-cmd edit fui 24 %form%[\"title\"] = \"§6Faction Creation UI\"
+cmd edit fui 24 %form%[\"title\"] = \"§6§lCreate your Faction!\"
 cmd edit fui 25 %i1%[\"type\"] = \"input\"
 cmd edit fui 26 %i1%[\"text\"] = \"§6Type below what name you want your Faction to have.\"
-cmd edit fui 27 %i1%[\"placeholder\"] = \"§6Type here...\"
+cmd edit fui 27 %i1%[\"placeholder\"] = \"§6Type your desired faction name here...\"
 cmd edit fui 28 %con%[] = %i1%
 cmd edit fui 29 %form%[\"content\"] = %con%
 cmd edit fui 30 %response% = dialog(%p%, %form%)
@@ -40,10 +40,10 @@ cmd edit fui 40 sync
 cmd edit fui 41 %all% = onlineplayers()
 cmd edit fui 42 %player% = %p% 
 cmd edit fui 43 %form%[\"type\"] = \"custom_form\"
-cmd edit fui 44 %form%[\"title\"] = \"§6Invite to Faction UI\"
+cmd edit fui 44 %form%[\"title\"] = \"§6§lInvite players to your Faction!\"
 cmd edit fui 45 %i1%[\"type\"] = \"input\"
 cmd edit fui 46 %i1%[\"text\"] = \"§6Type the player's name you want to invite to your Faction.\"
-cmd edit fui 47 %i1%[\"placeholder\"] = \"§6Type here...\"
+cmd edit fui 47 %i1%[\"placeholder\"] = \"§6Type the player's name here...\"
 cmd edit fui 48 %con%[] = %i1%
 cmd edit fui 49 %form%[\"content\"] = %con%
 cmd edit fui 50 %response% = dialog(%p%, %form%)
