@@ -1,9 +1,9 @@
-cmd create changelogs Check whats added in the latest patch
+cmd create changelogs Check whats added in the latest patch. 
 cmd add changelogs %player% = %p%
 cmd add changelogs %gui%[\"type\"] = \"form\"
-cmd add changelogs %gui%[\"title\"] = \"§6What's new in §4§l0.3.0§r§6!\"
-cmd add changelogs %gui%[\"content\"] = \"§6§lNEW FEATURES\\n§r\\n§6- §dIntroducing the all-new Mythic Core! The new core will make sure all services and systems run on startup successfully and optimises services to best status.\\n§r\\n§6- §dThe old Mythic Core has been renamed to Mythic UI just because it's a simple UI that lists all available features.\\n§r\\n§6- §dEverything has been re-worked. Welcome to the new Mythic Network 1.0.§r\\n§d§lBUG FIXES\\n§r\\n§6- §dFixed issues with inside Core.\\n§r\\n§6- §dFixed alot of issues with commands.\\n§r\\n§6- §dSynchronized some asynchronized tasks that caused extreme lag.\"
-cmd add changelogs %button0%[\"text\"] = \"§cExit\"
+cmd add changelogs %gui%[\"title\"] = \"§6What's new in §4§l0.4.0 - Quality Update§r§6!\"
+cmd add changelogs %gui%[\"content\"] = \"§6§lWhat's new\\n§r\\n§6- §dWe have been working hard at Mythic these weeks, on making our features better on the quality side of them. This update will be based on their quality and stability. That's why we are naming this update the Quality Update.\\n§r\\n§d§lBug Fixes\\n§r\\n§6 - §dGeneral bug fixes.\\n§r\\n§6- §d General quality bug fixes.\\n§r\\n§6- §dCommand & Core optimisations.
+cmd add changelogs %button0%[\"text\"] = \"§c§lExit\"
 cmd add changelogs %buttons%[] = %button0%
 cmd add changelogs %gui%[\"buttons\"] = %buttons%
 cmd add changelogs %response% = dialog(%player%, %gui%)
