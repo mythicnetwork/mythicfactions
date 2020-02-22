@@ -2,8 +2,8 @@ cmd create eshop Enchantment Shop
 cmd add eshop %player% = %p%
 cmd add eshop if varset(%args%[1]) then let %player% = %args%[1]
 cmd add eshop %gui%[\"type\"] = \"form\"
-cmd add eshop %gui%[\"title\"] = \"§d§lEnchantment UI 1.0.0\"
-cmd add eshop %gui%[\"content\"] = \"§6Select a enchantment to continue.\"
+cmd add eshop %gui%[\"title\"] = \"§d§lEnchantment UI\"
+cmd add eshop %gui%[\"content\"] = \"§6Select a enchantment to put on your armor/tools/weapons!\"
 cmd add eshop %opt0%[\"text\"] = \"§cExit§r\"
 cmd add eshop %opt1%[\"text\"] = \"§6Sharpness\"
 cmd add eshop %opt2%[\"text\"] = \"§6Efficiency\"
