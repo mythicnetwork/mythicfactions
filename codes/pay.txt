@@ -1,5 +1,5 @@
 cmd delete paymoney
-cmd create paymoney Payment UI 1.0.0
+cmd create paymoney Pay another player!
 cmd edit paymoney 1 let %player% = %p%
 cmd edit paymoney 2 if varset(%args%[1]) then %player% = %args%[1]
 cmd edit paymoney 3 %all% = onlineplayers()
