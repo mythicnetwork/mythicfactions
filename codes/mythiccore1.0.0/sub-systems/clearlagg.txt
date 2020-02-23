@@ -12,4 +12,4 @@ cmd edit cl 9 sleep 60
 cmd edit cl 10 asop /lagg clear all
 cmd edit cl 11 message onlineplayers() §6ClearLagg §8§l>§r §6Entities cleared and server is now running in §doptimized §6status.
 cmd edit cl 12 goto 1
-cmd edit cl exit
+cmd edit cl 13 exit
