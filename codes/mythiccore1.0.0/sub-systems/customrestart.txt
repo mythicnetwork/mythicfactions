@@ -1,4 +1,5 @@
 cmd create cs Custom Restart System
+cmd unregister cs
 cmd edit cs 1 sync
 cmd edit cs 2 message §d§lMythic §cNetwork §6 §r§6Server is restarting in §d§l3 §r§6hours.
 cmd edit cs 3 sleep 3600
