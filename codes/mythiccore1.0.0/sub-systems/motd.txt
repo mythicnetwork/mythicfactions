@@ -7,6 +7,6 @@ cmd edit motdmngr 4 ascon /motd del 1
 cmd edit motdmngr 5 ascon /motd del 1
 cmd edit motdmngr 6 ascon /motd add §d§lMythic §cNetwork §6» §6Factions §cBeta§6!
 cmd edit motdmngr 7 ascon /motd add §d§lMythic §cNetwork §6» §6Welcome!
-cmd edit motdmngr 8 ascon /motd add §d§lMythic §cNetwork §6» §6Factions is close to getting out of §cBeta§6!
+cmd edit motdmngr 8 ascon /motd add §d§lMythic §cNetwork §6» §6Factions is now on Season 1§6!
 cmd edit motdmngr 9 message onlineplayers() §6MOTD messages synchronized.
 cmd edit motdmngr 10 exit
