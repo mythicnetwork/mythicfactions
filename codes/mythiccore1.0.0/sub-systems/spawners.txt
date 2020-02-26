@@ -17,7 +17,7 @@ cmd add spawners %g% = %gd%[%pos%]
 cmd add spawners drop %gw% %gx% %gy% %gz% %g%
 cmd add spawners sleep 120
 cmd add spawners %spawner% = blockinfo(%sw%, %sx%, %sy%, %sz%)
-cmd add spawners sleep 8
+cmd add spawners sleep 4
 cmd add spawners goto 1
 cmd trigger place spawners
 
