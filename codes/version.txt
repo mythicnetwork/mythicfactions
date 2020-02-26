@@ -3,7 +3,7 @@ cmd add v sync
 cmd add v %player% = %p%
 cmd add v %gui%[\"type\"] = \"form\"
 cmd add v %gui%[\"title\"] = \"§6§lFactions version\"
-cmd add v %gui%[\"content\"] = \"§6Showing Information about Server:\\n§r\\n§6Running PocketMine-MP v§c3.11.6 §6based on §d1.14-1.14.30§6.\\n§r\\n§6Running patch v§4§l0.4.0 Season 1 - Quality Update§r §6based on §d§lMythic §cFactions §r§6Core MTH-1.1.0.\"
+cmd add v %gui%[\"content\"] = \"§6Showing Information about Server:\\n§r\\n§6Running PocketMine-MP v§c3.11.6 §6based on §d1.14-1.14.30§6.\\n§r\\n§6Running patch v§4§l1.0.0 Season 1 - Quality Update§r §6based on §d§lMythic §cFactions §r§6Core MTH-1.1.0.\"
 cmd add v %button0%[\"text\"] = \"§c§lExit\"
 cmd add v %buttons%[] = %button0%
 cmd add v %gui%[\"buttons\"] = %buttons%
