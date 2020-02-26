@@ -1,5 +1,5 @@
 cmd create cratemngr not for manual use!
-cmd edit cratemngr 1 if %args%[9] = \"§6Crate Key\" then goto 3
+cmd edit cratemngr 1 if %args%[9] = \"§r§6Crate Key\" then goto 3
 cmd edit cratemngr 2 exit
 cmd edit cratemngr 3 let %ll% = %args%[3]
 cmd edit cratemngr 4 let %xx% = %args%[4]
@@ -30,7 +30,7 @@ cmd edit cratemngr 28 if %itm% = 5 then goto 69
 cmd edit cratemngr 29 if %itm% = 6 then goto 72
 cmd edit cratemngr 30 if %itm% = 7 then goto 75
 cmd edit cratemngr 31 exit
-cmd edit cratemngr 32 message %p% §d§lM§cN §6CRATES §e|§r §dYou won a §cOverlord §6kit!
+cmd edit cratemngr 32 message %p% §d§lM§cN §6CRATES §e|§r §dYou won a §cOverlord §dkit!
 cmd edit cratemngr 33 ascon /give %p% diamond_helmet 1 {ench:[{id:0s,lvl:4s}]}
 cmd edit cratemngr 34 ascon /give %p% diamond_chestplate 1 {ench:[{id:0s,lvl:4s}]}
 cmd edit cratemngr 35 ascon /give %p% diamond_leggings 1 {ench:[{id:0s,lvl:4s}]}
@@ -50,7 +50,7 @@ cmd edit cratemngr 48 ascon /cmd run key %p%
 cmd edit cratemngr 49 ascon /cmd run key %p%
 cmd edit cratemngr 50 ascon /cmd run key %p%
 cmd edit cratemngr 51 exit
-cmd edit cratemngr 52 message %p% §d§lM§cN §6CRATES §e|§r §dYou won a §e§lGolden King§r §6kit!
+cmd edit cratemngr 52 message %p% §d§lM§cN §6CRATES §e|§r §dYou won a §e§lGolden King§r §dkit!
 cmd edit cratemngr 53 ascon /give %p% golden_helmet 1
 cmd edit cratemngr 54 ascon /give %p% golden_chestplate 1
 cmd edit cratemngr 55 ascon /give %p% golden_leggings 1
@@ -77,22 +77,22 @@ cmd edit cratemngr 75 message %p% §d§lM§cN §6CRATES §e|§r §dYou won 32 Em
 cmd edit cratemngr 76 ascon /give %p% emerald 32
 cmd edit cratemngr 77 exit
 
-cmd create key1 Give a crate key to a player
+cmd create key1 Vote reward keys
 cmd edit key1 1 if varset(%args%[1]) = %true% then goto 4
 cmd edit key1 2 message %p% §6Enter a player name!
 cmd edit key1 3 exit
 cmd edit key1 4 let %trg% = %args%[1]
-cmd edit key1 5 ascon /give %trg% 399 1 {display:{Name:§6Crate Key}}
-cmd edit key1 6 ascon /give %trg% 399 1 {display:{Name:§6Crate Key}}
+cmd edit key1 5 ascon /give %trg% 399 1 {display:{Name:§r§6Crate Key}}
+cmd edit key1 6 ascon /give %trg% 399 1 {display:{Name:§r§6Crate Key}}
 cmd edit key1 7 message onlineplayers() §d§lM§cN §e|§r §d%trg% §6has received 2 crate keys from voting! Vote now to get rewards!
 cmd edit key1 8 exit
 
-cmd create key Give a crate key to a player
+cmd create key Give a crate key to a player.
 cmd edit key 1 if varset(%args%[1]) = %true% then goto 4
 cmd edit key 2 message %p% §6Enter a player name!
 cmd edit key 3 exit
 cmd edit key 4 let %trg% = %args%[1]
-cmd edit key 5 ascon /give %trg% 399 1 {display:{Name:§6Crate Key}}
+cmd edit key 5 ascon /give %trg% 399 1 {display:{Name:§r§6Crate Key}}
 cmd edit key 6 exit
 
 cmd unregister cratemngr
