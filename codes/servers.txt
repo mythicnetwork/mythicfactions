@@ -15,6 +15,6 @@ cmd edit servers 13 %gui%[\"buttons\"] = %buttons%
 cmd edit servers 14 %response% = dialog(%player%, %gui%)
 cmd edit servers 15 if %response% = 0 then /transferserver mythicpvp.pocket.pe 16859
 cmd edit servers 16 if %response% = 1 then message %p% §6You're here on Factions!
-cmd edit servers 17 if %response% = 2 then /transferserver hub.mythicnetwork.tk:19594
+cmd edit servers 17 if %response% = 2 then /transferserver hub.mythicnetwork.tk 19594
 cmd edit servers 18 if %response% = 3 then exit
 cmd edit servers 19 exit
