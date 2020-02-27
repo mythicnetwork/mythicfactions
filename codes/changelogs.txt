@@ -2,7 +2,7 @@ cmd create changelogs Check whats added in the latest patch.
 cmd add changelogs %player% = %p%
 cmd add changelogs %gui%[\"type\"] = \"form\"
 cmd add changelogs %gui%[\"title\"] = \"§6What's new in §4§lv1.0.0 - Quality Update§r§6!\"
-cmd add changelogs %gui%[\"content\"] = \"§6§lWhat's new\\n§r\\n§6- §dWe have been working hard at Mythic these weeks, on making our features better on the quality side of them. This update will be based on their quality and stability. That's why we are naming this update the Quality Update.\\n§r\\n§6- §dIntroducing, §6§lSEASONS§r§d! Welcome to Season §61 §dof Factions. Seasons won't have a end time or scheduled end time, so don't expect a "§6§lSEASON ENDS IN:§r§d" counter.\\n§r\\n§d§lBug Fixes\\n§r\\n§6 - §dGeneral bug fixes.\\n§r\\n§6- §d General quality bug fixes.\\n§r\\n§6- §dCommand & Core optimisations.
+cmd add changelogs %gui%[\"content\"] = \"§6§lWhat's new\\n§r\\n§6- §dWe have been working hard at Mythic these weeks, on making our features better on the quality side of them. This update will be based on their quality and stability. That's why we are naming this update the Quality Update.\\n§r\\n§6- §dIntroducing, §6§lSEASONS§r§d! Welcome to Season §61 §dof Factions. Seasons won't have a end time or scheduled end time, so don't expect a "§6§lSEASON ENDS IN:§r§d" counter.\\n§r\\n§d§lBug Fixes\\n§r\\n§6 - §dGeneral bug fixes.\\n§r\\n§6- §d General quality bug fixes.\\n§r\\n§6- §dCommand & Core optimisations.\"
 cmd add changelogs %button0%[\"text\"] = \"§c§lExit\"
 cmd add changelogs %buttons%[] = %button0%
 cmd add changelogs %gui%[\"buttons\"] = %buttons%
