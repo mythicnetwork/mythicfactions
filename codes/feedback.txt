@@ -1,0 +1,19 @@
+cmd create feedback Give us feedback on what we can improve!
+cmd edit feedback 1 %all% = onlineplayers()
+cmd edit feedback 2 %player% = %p% 
+cmd edit feedback 3 %form%[\"type\"] = \"custom_form\"
+cmd edit feedback 4 %form%[\"title\"] = \"§6§lFactions Feedback\"
+cmd edit feedback 5 %i1%[\"type\"] = \"input\"
+cmd edit feedback 6 %i1%[\"text\"] = \"\\n§r§6Give us feedback on a feature that you suggest a edit/change or want a feature added. §c§lWARNING! False feedback or just giving random messages will result to a warning. We track feedback actively.\"
+cmd edit feedback 7 %i1%[\"placeholder\"] = \"§6Type your feedback here...\"
+cmd edit feedback 8 %con%[] = %i1%
+cmd edit feedback 9 %form%[\"content\"] = %con%
+cmd edit feedback 10 %response% = dialog(%p%, %form%)
+cmd edit feedback 11 %feedback% = %response%[0]
+cmd edit feedback 12 if varset(%feedback%) then goto 14
+cmd edit feedback 13 exit
+cmd edit feedback 14 %discord_message% = \"**Feedback |** \" + %p% + \" gave feedback: \" + %feedback% + \".\"
+cmd edit feedback 15 let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=680416990938267689&token=SbVKo7aURiF9TuXePR1tRaJyLJgHPwAy8r9U-NWAWLsOh3alyuXFlhECz1WwG5819CSC&message=\" + urlencode(%discord_message%))
+cmd edit feedback 16 message %p% §d§lMythic §cNetwork§6 »§r§6 You sent the following feedback: %feedback%§6. Thanks for helping us change Mythic to a better network!
+cmd edit feedback 17 ascon /cmd add fb FBP | %p% sent the following feedback: %feedback%.
+cmd edit feedback 18 exit

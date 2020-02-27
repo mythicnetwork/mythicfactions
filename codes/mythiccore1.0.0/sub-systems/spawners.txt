@@ -1,4 +1,4 @@
-cmd create spawners
+cmd create spawners Spawner System
 cmd unregister spawners
 cmd add spawners %ore% = array(\"§7Coal Spawner\", \"§fIron Spawner\", \"§eGold Spawner\", \"§bDiamond Spawner\", \"§aEmerald Spawner\", \"§cRedstone Spawner\", \"§1Lapis Lazuli Spawner\")
 cmd add spawners if (%args%[3] = \"world\") and (%args%[9] in %ore%) then goto 4
@@ -17,7 +17,7 @@ cmd add spawners %g% = %gd%[%pos%]
 cmd add spawners drop %gw% %gx% %gy% %gz% %g%
 cmd add spawners sleep 120
 cmd add spawners %spawner% = blockinfo(%sw%, %sx%, %sy%, %sz%)
-cmd add spawners sleep 8
+cmd add spawners sleep 25
 cmd add spawners goto 1
 cmd trigger place spawners
 
@@ -26,7 +26,7 @@ cmd add ss load %spawnerscost%
 cmd add ss if %args%[1] = \"help\" then message %p% \"§aSpawnerShop\\n/ss - Opens SpawnerShop\"
 cmd add ss if %args%[1] = \"set\" then goto 125
 cmd add ss %gui%[\"type\"] = \"custom_form\"
-cmd add ss %gui%[\"title\"] = \"§6§lSpawner Shop UI\"
+cmd add ss %gui%[\"title\"] = \"§6§lSpawner Shop\"
 cmd add ss %i0%[\"type\"] = \"dropdown\"
 cmd add ss %i0%[\"text\"] = \"§6Select a spawner to buy!\"
 cmd add ss %dpo%[] = \"§6Coal Spawner - §d$\" + %spawnerscost%[\"coal\"]

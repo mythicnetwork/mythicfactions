@@ -1,0 +1,24 @@
+cmd create cs Custom Restart System
+cmd unregister cs
+cmd edit cs 2 message onlineplayers() §d§lMythic §cNetwork §6» §r§6Server is restarting in §d§l3 §r§6hours.
+cmd edit cs 3 sleep 3600
+cmd edit cs 4 message onlineplayers() §d§lMythic §cNetwork §6» §r§6Server is restarting in §d§l2 §r§6hours.
+cmd edit cs 5 sleep 3600
+cmd edit cs 6 message onlineplayers() §d§lMythic §cNetwork §6» §r§6Server is restarting in §d§l1 §r§6hour.
+cmd edit cs 7 sleep 1800
+cmd edit cs 8 message onlineplayers() §d§lMythic §cNetwork §6» §r§6Server is restarting in §d§l30 §r§6minutes.
+cmd edit cs 9 sleep 900
+cmd edit cs 10 message onlineplayers() §d§lMythic §cNetwork §6» §r§6Server is restarting in §d§l15 §r§6minutes.
+cmd edit cs 11 sleep 300
+cmd edit cs 12 message onlineplayers() §d§lMythic §cNetwork §6» §r§6Server is restarting in §d§l5 §r§6minutes.
+cmd edit cs 13 sleep 240
+cmd edit cs 14 message onlineplayers() §d§lMythic §cNetwork §6» §r§6Server is restarting in §d§l3 §r§6seconds.
+cmd edit cs 15 sleep 1
+cmd edit cs 16 message onlineplayers() §d§lMythic §cNetwork §6» §r§6Server is restarting in §d§l2 §r§6seconds.
+cmd edit cs 17 sleep 1
+cmd edit cs 18 message onlineplayers() §d§lMythic §cNetwork §6» §r§6Server is restarting in §d§l1 §r§6second.
+cmd edit cs 19 sleep 1
+cmd edit cs 20 message §d§lMythic §cNetwork §6» §r§6Server restarting.
+cmd edit cs 21 ascon kick onlineplayers() §dServer restarting.
+cmd edit cs 22 ascon pconfig S0C2K46
+cmd edit cs 23 exit

@@ -1,7 +1,10 @@
 cmd create bc Server Broadcasts
 cmd unregister bc
-cmd add bc message onlineplayers() §d§lMythic §cNetwork §6» §6Welcome to the Factions §cBeta§6!
-cmd add bc sleep 3800
-cmd add bc message onlineplayers() §d§lMythic §cNetwork §6» §6Features are not fully configured and optimized so you will 100% experience some lag/bugs.
-cmd add bc sleep 4200
-cmd add bc goto 1
+cmd edit bc 1 message onlineplayers() §d§lMythic §cNetwork §6» §6Welcome to the Factions §d§l- Season 1§r§6!
+cmd edit bc 2 sleep 3800
+cmd edit bc 3 message onlineplayers() §d§lMythic §cNetwork §6» §6Factions is now out of Beta!
+cmd edit bc 4 sleep 4200
+cmd edit bc 5 message onlineplayers() §d§lMythic §cNetwork §6» §6Welcome to the §dv1.0.0 - Quality Update§6! Check what's new in §d/changelogs§6!
+cmd edit bc 6 sleep 3200
+cmd edit bc 7 goto 1
+cmd edit bc 8 exit

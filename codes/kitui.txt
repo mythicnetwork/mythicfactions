@@ -1,4 +1,4 @@
-cmd create kits A advanced kit UI made by NikosProGamer
+cmd create kits Select a kit to fight and survive against the other players!
 cmd add kits let %allowed% = array(\"YT\", \"Guest\", \"Creator\", \"God\", \"Warrior\", \"Emperor\", \"Owner\", \"Admin\", \"Mod\", \"Helper\", \"Voter\", \"Trainee\")
 cmd add kits let %pgrp% = playergroup(%p%)
 cmd add kits if %pgrp% in %allowed% then goto 6
@@ -6,14 +6,14 @@ cmd add kits message %p% §6You don't have permission to use this command.
 cmd add kits exit
 cmd add kits %player% = %p%
 cmd add kits %gui%[\"type\"] = \"form\"
-cmd add kits %gui%[\"title\"] = \"§6Kit UI 3.0.0\"
+cmd add kits %gui%[\"title\"] = \"§6§lKits UI\"
 cmd add kits %gui%[\"content\"] = \"§6Choose a kit to make your Faction the best and show your power at the others!\"
 cmd add kits %button0%[\"text\"] = \"§6Member Kit\"
 cmd add kits %button1%[\"text\"] = \"§6Voter Kit\"
 cmd add kits %button2%[\"text\"] = \"§cWarrior Kit - §d§lSOON\"
 cmd add kits %button3%[\"text\"] = \"§dEmperor Kit - §d§lSOON\"
-cmd add kits %button4%[\"text\"] = \"§e§lGolden King §r§6Kit - §d2500K$\"
-cmd add kits %button5%[\"text\"] = \"§c§lOverlord §r§6Kit - §d50K$\"
+cmd add kits %button4%[\"text\"] = \"§e§lGolden King §r§6Kit - §d2,500$\"
+cmd add kits %button5%[\"text\"] = \"§c§lOverlord §r§6Kit - §d50,000$\"
 cmd add kits %button6%[\"text\"] = \"§cExit\"
 cmd add kits %buttons%[] = %button0%
 cmd add kits %buttons%[] = %button1%
@@ -29,26 +29,26 @@ cmd add kits if %response% = 1 then goto 46
 cmd add kits if %response% = 2 then message %p% §dWarrior §6kit is currently disabled.
 cmd add kits if %response% = 3 then message %p% §dEmperor §6kit is currently disabled.
 cmd add kits if %response% = 4 then goto 81
-cmd add kits if %response% = 5 then goto 99
+cmd add kits if %response% = 5 then goto 100
 cmd add kits if %response% = 6 then exit
 cmd add kits exit
 cmd add kits #MemberKit
 cmd add kits let %kit1% = array(\"YT\", \"Voter\", \"Guest\", \"Creator\", \"Emperor\", \"Warrior\", \"God\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
 cmd add kits let %pgrp% = playergroup(%p%)
 cmd add kits if %pgrp% in %kit1% then goto 40
-cmd add kits message %p% §6You don't have permission to use this command.
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You don't have permission to use this kit.
 cmd add kits exit
 cmd add kits ascon /give %p% 267 1
 cmd add kits ascon /give %p% steak 64
 cmd add kits ascon /give %p% iron_pickaxe 1
 cmd add kits ascon /give %p% iron_axe 1
-cmd add kits message %p% §6You have choosed §l§6Member§r §6kit!
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You have choosed §l§6Member§r §6kit!
 cmd add kits exit
 cmd add kits #VoterKit
 cmd add kits let %kit2% = array(\"Voter\", \"YT\", \"Creator\", \"Emperor\", \"Warrior\", \"God\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
 cmd add kits let %pgrp% = playergroup(%p%)
 cmd add kits if %pgrp% in %kit2% then goto 52
-cmd add kits message %p% §6You don't have permission to use this command.
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You don't have permission to use this kit.
 cmd add kits exit
 cmd add kits ascon /give %p% 310 1
 cmd add kits ascon /give %p% 311 1
@@ -59,25 +59,25 @@ cmd add kits ascon /give %p% steak 64
 cmd add kits ascon /give %p% diamond_pickaxe
 cmd add kits ascon /give %p% diamond_axe
 cmd add kits ascon /give %p% ender_pearl 2
-cmd add kits message %p% §6You have choosed §lVote§r §6kit!
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You have choosed §lVote§r §6kit!
 cmd add kits exit
 cmd add kits #WarriorKit
 cmd add kits let %kit3% = array(\"Warrior\", \"Creator\", \"Emperor\", \"YT\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
 cmd add kits let %pgrp% = playergroup(%p%)
 cmd add kits if %pgrp% in %kit3% then goto 69
-cmd add kits message %p% §6You don't have permission to use this command.
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You don't have permission to use this kit.
 cmd add kits exit
 cmd add kits asop /kitgive warriorkit %p%
-cmd add kits message %p% §6You have choosed §lWarrior§r §6kit!
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You have choosed §lWarrior§r §6kit!
 cmd add kits exit
 cmd add kits #EmperorKit
 cmd add kits let %kit4% = array(\"YT\", \"Creator\", \"Emperor\", \"Owner\", \"Admin\", \"Mod\", \"Helper\", \"God\")
 cmd add kits let %pgrp% = playergroup(%p%)
 cmd add kits if %pgrp% in %kit4% then goto 78
-cmd add kits message %p% §6You don't have permission to use this command.
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You don't have permission to use this kit.
 cmd add kits exit
 cmd add kits asop /kitgive emperorkit %p%
-cmd add kits message %p% §6You have choosed §lEmperor§r §6kit!
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You have choosed §lWarrior§r §6kit!
 cmd add kits exit
 cmd add kits #GoldenKingKit(MONEY)
 cmd add kits let %money% = playerbalance(%p%)
@@ -96,12 +96,13 @@ cmd add kits ascon /give %p% golden_apple 12
 cmd add kits ascon /give %p% steak 64
 cmd add kits ascon /give %p% gold_pickaxe 1
 cmd add kits ascon /give %p% gold_axe 1
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You have choosed §e§lGolden Kit §r§6kit!
 cmd add kits exit
 cmd add kits #OverloadKit(MONEY)
 cmd add kits let %money% = playerbalance(%p%)
-cmd add kits if %money% > 50000 then goto 106
-cmd add kits if %money% = 50000 then goto 106
-cmd add kits if %money% < 50000 then goto 104
+cmd add kits if %money% > 50000 then goto 107
+cmd add kits if %money% = 50000 then goto 107
+cmd add kits if %money% < 50000 then goto 105
 cmd add kits message %p% §d§lMythic §cNetwork §6»§r§d You don't have enough money to buy the §c§lOverlord §r§6kit!
 cmd add kits exit
 cmd add kits ascon /takemoney %p% 50000 
@@ -118,5 +119,5 @@ cmd add kits ascon /give %p% diamond_pickaxe 1 {ench:[{id:15s,lvl:4s}]}
 cmd add kits ascon /give %p% diamond_axe 1 {ench:[{id:15s,lvl:3s}]}
 cmd add kits ascon /give %p% ender_pearl 16
 cmd add kits ascon /give %p% obsidian 128
-cmd add kits message %p% §6You have choosed §c§lOverlord §r§6kit!
+cmd add kits message %p% §d§lM§cN §dKITS §e| §r§6You have choosed §c§lOverlord §r§6kit!
 cmd add kits exit
