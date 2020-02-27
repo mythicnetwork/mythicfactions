@@ -23,7 +23,8 @@ cmd edit banui 61 if %response% = %false% then exit
 cmd edit banui 62 %index% = %response%[0]
 cmd edit banui 63 %name% = %all%[%index%]
 cmd edit banui 64 %reason% = %response%[1]
-cmd edit banui 65 if varset(%name%) and varset(%reason%) then goto 1000
+cmd edit banui 65 if varset(%name%) and varset(%reason%) then goto 100
 cmd edit banui 66 exit
 cmd edit banui 100 /ban %name% %reason%
 cmd edit banui 101 message onlineplayers() §d§lMythic §cNetwork§6 »§r §d%name% §6was banned by §d%p%§6 for §d%reason%§6.
+cmd edit banui 102 exit
