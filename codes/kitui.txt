@@ -1,5 +1,5 @@
 cmd create kits Select a kit to fight and survive against the other players!
-cmd add kits let %allowed% = array(\"YT\", \"Guest\", \"Creator\", \"God\", \"Warrior\", \"Emperor\", \"Owner\", \"Admin\", \"Mod\", \"Helper\", \"Voter\", \"Trainee\")
+cmd add kits let %allowed% = array(\"YT\", \"Guest\", \"Creator\", \"God\", \"Warrior\", \"Emperor\", \"Owner\", \"Admin\", \"Moderator\", \"Helper\", \"Voter\", \"Trainee\")
 cmd add kits let %pgrp% = playergroup(%p%)
 cmd add kits if %pgrp% in %allowed% then goto 6
 cmd add kits message %p% §6You don't have permission to use this command.
