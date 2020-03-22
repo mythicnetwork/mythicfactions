@@ -9,7 +9,7 @@ cmd edit jm 7 message onlineplayers() §d§lMythic §cNetwork §6» §r§e§l+ �
 cmd edit jm 8 exit
 cmd edit jm 9 message onlineplayers() §d§lMythic §cNetwork §6» §r§e§l+ §r§6%pgrp% §d%p%
 cmd edit jm 10 boss health logo 1
-cmd edit jm 11 let %bar% = \"      §d§lMythic §cNetwork\\n\\n§6§lFactions » §dSEASON 1\"
+cmd edit jm 11 let %bar% = \"§d§lMythic §cNetwork §6§lFactions » §dSEASON 1\"
 cmd edit jm 12 boss show logo onlineplayers()
 cmd edit jm 13 boss title logo %bar%
 cmd edit jm 14 exit

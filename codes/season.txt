@@ -1,9 +1,9 @@
-cmd create season Season 1 Information
+cmd create season §r§6§l» §r§dSeason 1 Information
 cmd add season %player% = %p%
 cmd add season %gui%[\"type\"] = \"form\"
-cmd add season %gui%[\"title\"] = \"§6§lFactions §d- Season 1§r§6!\"
-cmd add season %gui%[\"content\"] = \"§6§lWelcome to §dSeason 1§6, the first ever season of Factions. We will now update Factions with v1.0.0 patches as Seasons passes.\\n§r\\n§d§lSEASON 1 §6STARTED: §r§6February 28th, 2020.\\n§r\\n§d§lSEASON 1 ENDS: §r§6§k!!!!§r.\"
-cmd add season %button0%[\"text\"] = \"§c§lExit\"
+cmd add season %gui%[\"title\"] = \"§6§lFactions » §dSeason 1\"
+cmd add season %gui%[\"content\"] = \"§6Welcome to §dSeason 1§6, the first ever season of Factions. We will now update Factions with v1.0.0 patches as Seasons passes.\\n§r\\n§d§lSEASON 1 §6STARTED » §r§6February 28th, 2020.\\n§r\\n§d§lSEASON 1 ENDS » §r§6§k!!!!!§r.\"
+cmd add season %button0%[\"text\"] = \"§4§l» §r§6Exit\"
 cmd add season %buttons%[] = %button0%
 cmd add season %gui%[\"buttons\"] = %buttons%
 cmd add season %response% = dialog(%player%, %gui%)

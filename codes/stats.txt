@@ -1,15 +1,15 @@
-cmd create stats Shows a person or players stats!
+cmd create stats §r§6§l» §r§dShows a person or players stats!
 cmd edit stats 1 %player% = %args%[1]
 cmd edit stats 2 if %args%[1] = \"\" then let %player% = %p% 
 cmd edit stats 3 let %phand% = playerhand(%player%)
 cmd edit stats 4 let %bal% = playerbalance(%player%) 
 cmd edit stats 5 let %r% = playergroup(%player%)
-cmd edit stats 6 message %p% §d§lMythic §cNetwork§r §e| §6Loading Stats... 
-cmd edit stats 7 message %p% §d§lMythic §cNetwork§r §e| §6%player%'s Stats!
-cmd edit stats 8 message %p% §d§lMythic §cNetwork§r §e| §6Rank :§d %r%
-cmd edit stats 9 message %p% §d§lMythic §cNetwork§r §e| §6Money :§d %bal%$
-cmd edit stats 10 message %p% §d§lMythic §cNetwork§r §e| §6Current item in hand : §d%phand%
-cmd edit stats 11 message %p% §d§lMythic §cNetwork§r §e| §cPvP §6Stats of %player%
+cmd edit stats 6 message %p% §d§lMythic §cNetwork§r §6» §dLoading Stats... 
+cmd edit stats 7 message %p% §d§lMythic §cNetwork§r §6» §d%player%'s Stats!
+cmd edit stats 8 message %p% §d§lMythic §cNetwork§r §6» §dRank :§6 %r%
+cmd edit stats 9 message %p% §d§lMythic §cNetwork§r §6» §dMoney :§6 %bal%$
+cmd edit stats 10 message %p% §d§lMythic §cNetwork§r §6» §dCurrent item in hand : §6%phand%
+cmd edit stats 11 message %p% §d§lMythic §cNetwork§r §6» §cPvP §dStats of §6%player%
 cmd edit stats 12 /killrate stats %player%
 cmd edit stats 13 message %p% §r
 cmd edit stats 14 exit

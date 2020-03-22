@@ -1,8 +1,8 @@
-cmd create wild Teleport to a random location in the wild!
+cmd create wild §r§6§l» §r§dTeleport to a random location in the wild!
 cmd edit wild 1 let %wild-x% = random(-1500, 1500)
 cmd edit wild 2 let %wild-y% = 90
 cmd edit wild 3 let %wild-z% = random(-1500, 1500)
 cmd edit wild 4 ascon /effect %p% resistance 20 255
 cmd edit wild 5 move %p% world %wild-x% %wild-y% %wild-z%
-cmd edit wild 6 message %p% §d§lM§cN §6FACTIONS §e|§r §6Teleported to the Wild!
+cmd edit wild 6 message %p% §d§lMythic §cNetwork §6»§r §dTeleported to the wilderness!
 cmd edit wild 7 exit

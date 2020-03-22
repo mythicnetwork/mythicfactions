@@ -1,7 +1,7 @@
-cmd create afk Switch to AFK or get out of AFK!
+cmd create afk §r§6§l» §r§dSwitch to AFK or get out of AFK!
 cmd add afk if %args%[1] = (\"reset\") then goto 100
 cmd add afk load %afk%
-cmd add afk if varset(%afk%[%p%]) then message %p% §d§lM§cN §e| §r§6You can't do /afk two times!
+cmd add afk if varset(%afk%[%p%]) then message %p% §d§lMythic §cNetwork §6»§r §dYou can't do §6/afk §dtwo times!
 cmd add afk if varset(%afk%[%p%]) then exit
 cmd add afk let %xx% = %x%
 cmd add afk let %yy% = %y%
@@ -9,7 +9,7 @@ cmd add afk let %zz% = %z%
 cmd add afk let %yaww% = %yaw%
 cmd add afk let %pitchh% = %pitch%
 cmd add afk let %levell% = %level%
-cmd add afk message onlineplayers() §d§lM§cN §r§6AFK §e| §d%p% §6is now AFK!
+cmd add afk message onlineplayers() §d§lMythic §cNetwork §6»§r §6%p% §dis now AFK!
 cmd add afk load %afk%
 cmd add afk let %afk%[%p%] = %true%
 cmd add afk save %afk%
@@ -20,9 +20,9 @@ cmd add afk if %z% != %zz% then goto 24
 cmd add afk if %yaw% != %yaww% then goto 24
 cmd add afk if %pitch% != %pitchh% then goto 24
 cmd add afk if %level% != %level% then goto 24
-cmd add afk sleep 0.2
+cmd add afk sleep 0
 cmd add afk goto 15
-cmd add afk message onlineplayers() §d§lM§cN §r§6AFK §e| §d%p% §6is no longer AFK!
+cmd add afk message onlineplayers() §d§lMythic §cNetwork §6»§r §6%p% §dis no longer AFK!
 cmd add afk load %afk%
 cmd add afk let %afk%[%p%] =
 cmd add afk save %afk%
@@ -36,4 +36,4 @@ cmd edit afk 99 exit
 cmd add afk load %afk%
 cmd add afk let %afk%[%p%] =
 cmd add afk save %afk%
-cmd add afk message %p% §d§lM§cN §e| §r§6Successfully reset your AFK status!
+cmd add afk message %p% §d§lMythic §cNetwork §6»§r §dSuccessfully reset your AFK status!

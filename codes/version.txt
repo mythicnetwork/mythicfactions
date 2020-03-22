@@ -1,9 +1,9 @@
-cmd create v Shows server patch & version
+cmd create v §r§6§l» §r§dShows server patch & version
 cmd edit v 1 %player% = %p%
 cmd edit v 2 %gui%[\"type\"] = \"form\"
-cmd edit v 3 %gui%[\"title\"] = \"§6§lFactions version\"
-cmd edit v 4 %gui%[\"content\"] = \"§6Showing Information about Server:\\n§r\\n§6Running PocketMine-MP v§c3.11.6 §6based on §d1.14-1.14.30§6.\\n§r\\n§6Running patch v§4§l1.0.0 Season 1 - Quality Update§r §6based on §d§lMythic §cFactions §r§6Core MTH-1.1.0.\"
-cmd edit v 5 %button0%[\"text\"] = \"§c§lExit\"
+cmd edit v 3 %gui%[\"title\"] = \"§6§lFactions » §dVersion\"
+cmd edit v 4 %gui%[\"content\"] = \"§6§l» §r§dShowing Information about Server:\\n§r\\n§6§lRunning §dPocketMine-MP §6» §r§6v§c3.11.6 §6based on §d1.14-1.14.41§6.\\n§r\\n§6§lRunning patch » §r§dv§4§l1.1.0 Season 1§r §6based on §d§lMythic §cFactions §r§6Core §l» §r§dMTH-1.1.0.\"
+cmd edit v 5 %button0%[\"text\"] = \"§4§l» §r§6Exit\"
 cmd edit v 6 %buttons%[] = %button0%
 cmd edit v 7 %gui%[\"buttons\"] = %buttons%
 cmd edit v 8 %response% = dialog(%player%, %gui%)

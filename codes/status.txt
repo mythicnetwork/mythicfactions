@@ -1,9 +1,9 @@
-cmd create network Check the Network's Status
+cmd create network §r§6§l» §r§dCheck the Network's Status
 cmd edit network 1 %player% = %p%
 cmd edit network 2 %gui%[\"type\"] = \"form\"
-cmd edit network 3 %gui%[\"title\"] = \"§6Network Status\"
-cmd edit network 4 %gui%[\"content\"] = \"§d§lMythic §cNetwork §r§6Status\\n§r\\n§6Network Core - §e§lSTABLE§r\\n§r\\n§6KitPvP - §e§lONLINE§r\\n§r\\n§6Factions §r- §e§lONLINE§r\"
-cmd edit network 5 %button0%[\"text\"] = \"§c§lExit\"
+cmd edit network 3 %gui%[\"title\"] = \"§6§lNetwork » §dStatus\"
+cmd edit network 4 %gui%[\"content\"] = \"§d§lMythic §cNetwork §r§6Status\\n§r\\n§6Network Core §d§l» §e§lSTABLE§r\\n§r\\n§6KitPvP §d§l» §4§lOFFLINE§r\\n§r\\n§6Factions §d§l» §e§lONLINE§r\"
+cmd edit network 5 %button0%[\"text\"] = \"§4§l» §r§6Exit\"
 cmd edit network 6 %buttons%[] = %button0%
 cmd edit network 7 %gui%[\"buttons\"] = %buttons%
 cmd edit network 8 %response% = dialog(%player%, %gui%)
