@@ -19,3 +19,5 @@ cmd edit vote 108 ascon /setgroup %p% Voter
 cmd edit vote 109 ascon /givemoney %p% 4000
 cmd edit vote 110 ascon /cmd run key1 %p%
 cmd edit vote 111 exit
+
+//TODO; fix vote since server got removed from server list
