@@ -1,11 +1,11 @@
 #REPAIR
-cmd create repair Repair UI
+cmd create repair §r§6§l» §r§dRepair UI
 cmd add repair %player% = %p%
 cmd add repair %gui%[\"type\"] = \"form\"
 cmd add repair %gui%[\"title\"] = \"§6§lRepair your equipment!\"
 cmd add repair %gui%[\"content\"] = \"§dSelect the repair option below to continue.\"
-cmd add repair %opt0%[\"text\"] = \"§6§lRepair\"
-cmd add repair %opt1%[\"text\"] = \"§c§lExit\"
+cmd add repair %opt0%[\"text\"] = \"§6§l» §r§dRepair\"
+cmd add repair %opt1%[\"text\"] = \"§4§l» §r§6Exit\"
 cmd add repair %buttons%[] = %opt0%
 cmd add repair %buttons%[] = %opt1%
 cmd add repair %gui%[\"buttons\"] = %buttons%
@@ -15,10 +15,10 @@ cmd add repair if %response% = 0 then goto 100
 cmd add repair if %response% = 1 then exit
 cmd add repair exit
 cmd insert repair 100 %gui1%[\"type\"] = \"form\"
-cmd add repair %gui1%[\"title\"] = \"§6Repair Confirmation\"
-cmd add repair %gui1%[\"content\"] = \"§6Make sure you are holding the correct item and not a different one as if you make a mistake, we won't refund your money!\"
-cmd add repair %cancel%[\"text\"] = \"§cCancel\"
-cmd add repair %level1%[\"text\"] = \"§6Repair - §d5,000$\"
+cmd add repair %gui1%[\"title\"] = \"§6§lRepair Confirmation\"
+cmd add repair %gui1%[\"content\"] = \"§dMake sure you are holding the correct item and not a different one as if you make a mistake, we won't refund your money!\"
+cmd add repair %cancel%[\"text\"] = \"§4§l» §r§6Cancel\"
+cmd add repair %level1%[\"text\"] = \"§6§l» §dRepair - 5.000$\"
 cmd add repair %levels1%[] = %cancel%
 cmd add repair %levels1%[] = %level1%
 cmd add repair %gui1%[\"buttons\"] = %levels1%
@@ -29,15 +29,15 @@ cmd add repair if %response1% = 1 then goto 126
 cmd add repair sync
 cmd add repair exit
 cmd insert repair 126 %money% = playerbalance(%p%)
-cmd add repair if %money% < 5000 then message %player% §d§lM§cN §e|§r §6You don't have enough money to repair your item.
+cmd add repair if %money% < 5000 then message %player% §d§lMythic §cNetwork §6»§r §dYou don't have enough money to repair your item.
 cmd add repair if %money% < 5000 then exit
-cmd add repair if %money% > 5000 then message %p% §d§lM§cN §e|§r §6Successfully repaired!
-cmd add repair if %money% = 5000 then message %p% §d§lM§cN §e|§r §6Successfully repaired!
+cmd add repair if %money% > 5000 then message %p% §d§lMythic §cNetwork §6»§r §dSuccessfully repaired!
+cmd add repair if %money% = 5000 then message %p% §d§lMythic §cNetwork §6»§r §dSuccessfully repaired!
 cmd add repair ascon /takemoney %player% 5000
 cmd add repair asop /cmd run fix
 cmd add repair exit
 #FIX
-cmd create fix BETA> Repair your tools! (Hold them first.)
+cmd create fix §r§6§l» §r§dRepair your tools! (Hold them first.)
 cmd add fix if varset(%args%[1]) then goto 26
 cmd add fix let %tools% = array(256,257,258,259,261,269,270,271,273,274,275,277,278,279,284,285,286,291,292,293,294,346,359)
 cmd add fix let %weapons% = array(267,268,272,276,283)
@@ -45,7 +45,7 @@ cmd add fix let %armor% = array(298,299,300,301,302,303,304,305,306,307,308,309,
 cmd add fix let %hand% = playerhand(%p%)
 cmd add fix let %id% = %hand%[\"id\"]
 cmd add fix if (%id% in %tools%) or (%id% in %weapons%) or (%id% in %armor%) then goto 10
-cmd add fix message %p% §6The item you are trying to repair is unrepairable!
+cmd add fix message %p% §d§lMythic §cNetwork §6»§r §dThe item you are trying to repair is unrepairable!
 cmd add fix exit
 cmd add fix let %variant% = %hand%[\"variant\"]
 cmd add fix if %variant% = 0 then goto 29
@@ -61,11 +61,11 @@ cmd add fix let %hand%[\"variant\"] = 0
 cmd add fix let %inv%[%slot%] = %hand%
 cmd add fix carry %p% %inv%
 cmd add fix let %name% = %hand%[\"name\"]
-cmd add fix message %p% §d§lM§cN §e|§r §6Successfully repaired your §d%name% (%id%:0)§6!
+cmd add fix message %p% §d§lMythic §cNetwork §6»§r §dSuccessfully repaired your §6%name% (%id%:0)§d!
 cmd add fix exit
 cmd add fix #Please do not edit this by any way! If you encounter any issues contact our network, Mythic Network.
-cmd add fix message %p% \"§d§lM§cN §e|§r §6To use this command, hold the item you want to fix and type in chat §d/repair§6.\"
+cmd add fix message %p% §d§lMythic §cNetwork §6»§r §dTo use this command, hold the item you want to fix and type in chat §6/repair§d.
 cmd add fix exit
-cmd add fix message %p% §d§lM§cN §e|§r §6This tool is already repaired or at full durability!
+cmd add fix message %p% §d§lMythic §cNetwork §6»§r §dThis tool is already repaired or at full durability!
 cmd add fix exit
 cmd unregister fix

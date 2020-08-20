@@ -1,3 +1,7 @@
+### Out of core directory soon
+
+//TODO: Remove it completely from core
+
 cmd create spawners Spawner System
 cmd unregister spawners
 cmd add spawners %ore% = array(\"§7Coal Spawner\", \"§fIron Spawner\", \"§eGold Spawner\", \"§bDiamond Spawner\", \"§aEmerald Spawner\", \"§cRedstone Spawner\", \"§1Lapis Lazuli Spawner\")

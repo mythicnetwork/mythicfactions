@@ -1,13 +1,13 @@
-cmd create feed Feed yourself (Donator Command)
+cmd create feed §r§6§l» §r§dFeed yourself (Donator Command)
 cmd add feed let %donators% = array(\"Owner\", \"YT\", \"Creator\", \"Mod\", \"Helper\", \"Admin\", \"Warrior\", \"Emperor\", \"God\")
 cmd add feed let %pgrp% = playergroup(%p%)
 cmd add feed if %pgrp% in %donators% then goto 6
-cmd add feed message %p% §d§lM§cN §6FEED §e|§r §6You do not have permission to run this command.
+cmd add feed message %p% §d§lMythic §cNetwork §6»§r §cYou do not have permission to run this command.
 cmd add feed exit 
 cmd add feed let %player% = %args%[1] 
 cmd add feed if varset(%player%) then goto 8 
 cmd add feed let %status% = playerstatus(%p%) 
 cmd add feed let %saturation% = %status%[\"saturation\"]
 cmd add feed treat %p% %health% %saturation% 20
-cmd add feed message %p% §d§lM§cN §6FEED §e|§r §6Your hunger has been fed!
+cmd add feed message %p% §d§lMythic §cNetwork §6FEED §6»§r §dYour hunger has been fed!
 cmd add feed exit
