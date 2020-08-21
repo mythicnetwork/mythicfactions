@@ -1,5 +1,5 @@
-cmd create banui §r§6§l» §r§dSimple Staff UI tool
-cmd edit banui 1 let %staff% = array(\"Owner\", \"OP\", \"Creator\", \"Mod\", \"Admin\")
+cmd create banui §r§6§l» §r§dStaff Tool
+cmd edit banui 1 let %staff% = array(\"Owner\", \"OP\", \"Moderator\", \"Admin\")
 cmd edit banui 2 let %pgrp% = playergroup(%p%)
 cmd edit banui 3 if %pgrp% in %staff% then goto 6
 cmd edit banui 4 message %p% §4You don't have permission to use this command.
