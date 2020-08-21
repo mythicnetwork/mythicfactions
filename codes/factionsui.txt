@@ -24,7 +24,7 @@ cmd edit fui 22 if %response% = 3 then goto 61
 cmd edit fui 23 if %response% = 4 then goto 81
 cmd edit fui 24 if %response% = 5 then exit
 cmd edit fui 25 exit
-cmd edit fui 26 #CREATE
+cmd edit fui 26 #Faction create
 cmd edit fui 27 %all% = onlineplayers()
 cmd edit fui 28 %player% = %p% 
 cmd edit fui 29 %form%[\"type\"] = \"custom_form\"
@@ -41,8 +41,7 @@ cmd edit fui 39 if %namef% = \" \" then exit
 cmd edit fui 40 exit
 cmd edit fui 41 /f create %namef%
 cmd edit fui 42 exit
-cmd edit fui 43 #INVITE
-cmd edit fui 44 sync
+cmd edit fui 43 #Invite to Faction
 cmd edit fui 45 %all% = onlineplayers()
 cmd edit fui 46 %player% = %p% 
 cmd edit fui 47 %form%[\"type\"] = \"custom_form\"
@@ -59,8 +58,7 @@ cmd edit fui 57 if %namep% = \"\" then exit
 cmd edit fui 58 exit
 cmd edit fui 59 /f invite %namep%
 cmd edit fui 60 exit
-cmd edit fui 61 #OFFICERPROMO
-cmd edit fui 62 sync
+cmd edit fui 61 #Promote to Officer
 cmd edit fui 63 %all% = onlineplayers()
 cmd edit fui 64 %player% = %p% 
 cmd edit fui 65 %form%[\"type\"] = \"custom_form\"
@@ -77,8 +75,7 @@ cmd edit fui 75 if %namep% = \"\" then exit
 cmd edit fui 76 exit
 cmd edit fui 77 /f promote %namep%
 cmd edit fui 78 exit
-cmd edit fui 79 #GIVELEADERSHIP
-cmd edit fui 80 sync
+cmd edit fui 79 #Give Leadership
 cmd edit fui 81 %all% = onlineplayers()
 cmd edit fui 82 %player% = %p% 
 cmd edit fui 83 %form%[\"type\"] = \"custom_form\"
