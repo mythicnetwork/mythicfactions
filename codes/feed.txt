@@ -1,13 +1,13 @@
-cmd create feed §r§6§l» §r§dFeed yourself (Donator Command)
-cmd add feed let %donators% = array(\"Owner\", \"YT\", \"Creator\", \"Mod\", \"Helper\", \"Admin\", \"Warrior\", \"Emperor\", \"God\")
-cmd add feed let %pgrp% = playergroup(%p%)
-cmd add feed if %pgrp% in %donators% then goto 6
-cmd add feed message %p% §d§lMythic §cNetwork §6»§r §cYou do not have permission to run this command.
-cmd add feed exit 
-cmd add feed let %player% = %args%[1] 
-cmd add feed if varset(%player%) then goto 8 
-cmd add feed let %status% = playerstatus(%p%) 
-cmd add feed let %saturation% = %status%[\"saturation\"]
-cmd add feed treat %p% %health% %saturation% 20
-cmd add feed message %p% §d§lMythic §cNetwork §6FEED §6»§r §dYour hunger has been fed!
-cmd add feed exit
+cmd create feed §r§6§l» §r§dFeed yourself
+cmd edit feed 1 let %don% = array(\"Owner\", \"YT\", \"Moderator\", \"Trainee\", \"Admin\", \"Warrior\", \"Emperor\")
+cmd edit feed 2 let %pgrp% = playergroup(%p%)
+cmd edit feed 3 if %pgrp% in %don% then goto 6
+cmd edit feed 4 message %p% §4You do not have permission to run this command.
+cmd edit feed 5 exit 
+cmd edit feed 6 let %player% = %args%[1] 
+cmd edit feed 7 if varset(%player%) then goto 8 
+cmd edit feed 8 let %status% = playerstatus(%p%) 
+cmd edit feed 9 let %sat% = %status%[\"saturation\"]
+cmd edit feed 10 treat %p% %health% %sat% 20
+cmd edit feed 11 message %p% §d§lMythic §cNetwork §6FEED §6»§r §dYour hunger has been fed!
+cmd edit feed 12 exit
