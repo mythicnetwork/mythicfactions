@@ -116,6 +116,10 @@ cmd insert eshop 332 exit
 cmd insert eshop 333 ascon /enchant %p% protection 2
 cmd insert eshop 334 asop /pay sipancoolboy 15000
 cmd add eshop exit
+
+//TODO; This needs much work
+
+
 cmd insert eshop 400 %gui4%[\"type\"] = \"form\"
 cmd add eshop %gui4%[\"title\"] = \"§b§lUnbreaking§r\"
 cmd add eshop %gui4%[\"content\"] = \"§lChoose a Level§r\"
