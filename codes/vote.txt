@@ -1,5 +1,5 @@
 cmd create vote Claim your vote rewards!
-cmd edit vote 1 let %url%[] = \"https://minecraftpocket-servers.com/api/?object=votes&element=claim&key=eiMQW3i9vneZ0zLztMkEGKVOXJvtUaIsDn7&username=\"
+cmd edit vote 1 let %url%[] = \"https://minecraftpocket-servers.com/api/?object=votes&element=claim&key=8pby8ifEmlgHNNUs4XtZfKNzGTXpGyjfB&username=\"
 cmd edit vote 2 let %url%[] = %p%
 cmd edit vote 3 let %api1% = join(%url%, \"\")
 cmd edit vote 4 let %response% = geturl(%api1%)
@@ -7,7 +7,7 @@ cmd edit vote 5 if %response% = 1 then goto 100
 cmd edit vote 6 if %response% = 0 then message %p% §d§lM§cN §6VOTE §e| §r§dYou didn't vote today!
 cmd edit vote 7 if %response% = 2 then message %p% §d§lM§cN §6VOTE §e| §r§dYou already claimed your reward!
 cmd edit vote 8 exit
-cmd edit vote 100 let %url2%[] = \"https://minecraftpocket-servers.com/api/?action=post&object=votes&element=claim&key=eiMQW3i9vneZ0zLztMkEGKVOXJvtUaIsDn7&username=\"
+cmd edit vote 100 let %url2%[] = \"https://minecraftpocket-servers.com/api/?action=post&object=votes&element=claim&key=8pby8ifEmlgHNNUs4XtZfKNzGTXpGyjfB&username=\"
 cmd edit vote 101 let %url2%[] = %p%
 cmd edit vote 102 let %api2% = join(%url2%, \"\")
 cmd edit vote 103 let %response% = geturl(%api2%)
@@ -19,5 +19,3 @@ cmd edit vote 108 ascon /setgroup %p% Voter
 cmd edit vote 109 ascon /givemoney %p% 4000
 cmd edit vote 110 ascon /cmd run key1 %p%
 cmd edit vote 111 exit
-
-//TODO; fix vote since server got removed from server list

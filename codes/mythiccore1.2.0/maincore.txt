@@ -10,93 +10,93 @@ cmd add core if %option% = \"info\" then message %p% §dMythic §6Core Info §d�
 cmd add core if %option% = \"shut\" then asop /cmd run shutcore
 cmd add core exit
 cmd add core %current-time% = %time%
-cmd add core message onlineplayers() Factions | The Mythic Core is initializing start up.
-cmd add core let %discord_message% = \"**```Factions | The Mythic Core is initializing start up.```**\"
+cmd add core message onlineplayers() Factions > The Mythic Core is initializing start up.
+cmd add core let %discord_message% = \"**```Factions > The Mythic Core is initializing start up.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core sleep 1
-cmd add core message onlineplayers() Factions | The Mythic Core is now loading services.
-cmd add core let %discord_message% = \"**```Factions | The Mythic Core is now loading services.```**\"
+cmd add core message onlineplayers() Factions > The Mythic Core is now loading services.
+cmd add core let %discord_message% = \"**```Factions > The Mythic Core is now loading services.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading Crate Manager Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading Crate Manager Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading Crate Manager Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading Crate Manager Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run cratemngr
-cmd add core message onlineplayers() Mythic Core Factions | Loaded Crate Manager Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded Crate Manager Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded Crate Manager Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded Crate Manager Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading Bossbar system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading Bossbar system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading Bossbar system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading Bossbar system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon boss create logo
-cmd add core message onlineplayers() Mythic Core Factions | Loaded Bossbar system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded Bossbar system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded Bossbar system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded Bossbar system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading Broadcasts Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading Broadcasts Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading Broadcasts Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading Broadcasts Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run bc
-cmd add core message onlineplayers() Mythic Core Factions | Loaded Broadcasts Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded Broadcasts Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded Broadcasts Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded Broadcasts Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading Discord-based report Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading Discord-based report Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading Discord-based report Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading Discord-based report Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run dsr
-cmd add core message onlineplayers() Mythic Core Factions | Loaded Discord-based report Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded Discord-based report Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded Discord-based report Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded Discord-based report Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading ClearLagg system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading ClearLagg system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading ClearLagg system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading ClearLagg system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run cl
-cmd add core message onlineplayers() Mythic Core Factions | Loaded ClearLagg system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded ClearLagg system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded ClearLagg system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded ClearLagg system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading Join & Leave Messages system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading Join & Leave Messages system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading Join & Leave Messages system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading Join & Leave Messages system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run jm
 cmd add core ascon /cmd run lm
-cmd add core message onlineplayers() Mythic Core Factions | Loaded Join & Leave Messages system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded Join & Leave Messages system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded Join & Leave Messages system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded Join & Leave Messages system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading Custom Kill Messages system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading Custom Kill Messages system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading Custom Kill Messages system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading Custom Kill Messages system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run customkill
-cmd add core message onlineplayers() Mythic Core Factions | Loaded Custom Kill Messages system service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded Custom Kill Messages system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded Custom Kill Messages system service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded Custom Kill Messages system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading Custom HUDSync system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading Custom HUDSync system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading Custom HUDSync system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading Custom HUDSync system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run chud
-cmd add core message onlineplayers() Mythic Core Factions | Loaded Custom HUDSync system service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded Custom HUDSync system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded Custom HUDSync system service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded Custom HUDSync system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading MOTDSync system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading MOTDSync system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading MOTDSync system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading MOTDSync system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run motdmngr
-cmd add core message onlineplayers() Mythic Core Factions | Loaded MOTDSync system service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded MOTDSync system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded MOTDSync system service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded MOTDSync system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading MYTHICNETWORKSync system Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading MYTHICNETWORKSync system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading MYTHICNETWORKSync system Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading MYTHICNETWORKSync system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run nwsync
-cmd add core message onlineplayers() Mythic Core Factions | Loaded MYTHICNETWORKSync system service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded MYTHICNETWORKSync system Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded MYTHICNETWORKSync system service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded MYTHICNETWORKSync system Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
-cmd add core message onlineplayers() Mythic Core Factions | Loading Custom Restart Service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loading Custom Restart Service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loading Custom Restart Service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loading Custom Restart Service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core ascon /cmd run cs
-cmd add core message onlineplayers() Mythic Core Factions | Loaded Custom Restart service.
-cmd add core let %discord_message% = \"**```Mythic Core Factions | Loaded Custom Restart service.```**\"
+cmd add core message onlineplayers() Mythic Core Factions > Loaded Custom Restart service.
+cmd add core let %discord_message% = \"**```Mythic Core Factions > Loaded Custom Restart service.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core %total-time% = %time% - %current-time%
-cmd add core message onlineplayers() Factions | The Mythic Core took %total-time% seconds to load all services and systems.
-cmd add core let %discord_message% = \"**```Factions | The Mythic Core took \" + %total-time% + \" seconds to load all services and systems.```**\"
+cmd add core message onlineplayers() Factions > The Mythic Core took %total-time% seconds to load all services and systems.
+cmd add core let %discord_message% = \"**```Factions > The Mythic Core took \" + %total-time% + \" seconds to load all services and systems.```**\"
 cmd add core let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=674937611738939392&token=fOclDKQlBkk6DB9VoqKWbCLOI0tgik91xv2fnQB6Atj5VNAUqVDjTzN1PSDqnItFjLa-&message=\" + urlencode(%discord_message%))
 cmd add core exit

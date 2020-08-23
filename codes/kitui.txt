@@ -1,123 +1,123 @@
 cmd create kits §r§6§l» §r§dSelect a kit to fight and survive against the other players!
-cmd add kits let %allowed% = array(\"YT\", \"Guest\", \"Creator\", \"God\", \"Warrior\", \"Emperor\", \"Owner\", \"Admin\", \"Moderator\", \"Helper\", \"Voter\", \"Trainee\")
-cmd add kits let %pgrp% = playergroup(%p%)
-cmd add kits if %pgrp% in %allowed% then goto 6
-cmd add kits message %p% §6§d§lMythic §cNetwork §6» §r§dYou don't have permission to use this command.
-cmd add kits exit
-cmd add kits %player% = %p%
-cmd add kits %gui%[\"type\"] = \"form\"
-cmd add kits %gui%[\"title\"] = \"§6§lKits\"
-cmd add kits %gui%[\"content\"] = \"§6Choose a kit to make your Faction the best and show your power at the others!\"
-cmd add kits %button0%[\"text\"] = \"§6§l» §r§6Member\"
-cmd add kits %button1%[\"text\"] = \"§6§l» §r§eVoter\"
-cmd add kits %button2%[\"text\"] = \"§d§l» §cWarrior §d- SOON\"
-cmd add kits %button3%[\"text\"] = \"§d§l» §6Emperor §d- SOON\"
-cmd add kits %button4%[\"text\"] = \"§e§l» §r§eGolden King §d- 2.500$\"
-cmd add kits %button5%[\"text\"] = \"§c§l» §r§cOverlord §d- 50.000$\"
-cmd add kits %button6%[\"text\"] = \"§4§l» §r§6Exit\"
-cmd add kits %buttons%[] = %button0%
-cmd add kits %buttons%[] = %button1%
-cmd add kits %buttons%[] = %button2%
-cmd add kits %buttons%[] = %button3%
-cmd add kits %buttons%[] = %button4%
-cmd add kits %buttons%[] = %button5%
-cmd add kits %buttons%[] = %button6%
-cmd add kits %gui%[\"buttons\"] = %buttons%
-cmd add kits %response% = dialog(%player%, %gui%)
-cmd add kits if %response% = 0 then goto 34
-cmd add kits if %response% = 1 then goto 46
-cmd add kits if %response% = 2 then message %p% §d§lMythic §cNetwork §6»§r §c§lWarrior §r§dkit is currently disabled.
-cmd add kits if %response% = 3 then message %p% §d§lMythic §cNetwork §6»§r §6§lEmperor §r§dkit is currently disabled.
-cmd add kits if %response% = 4 then goto 81
-cmd add kits if %response% = 5 then goto 100
-cmd add kits if %response% = 6 then exit
-cmd add kits exit
-cmd add kits #MemberKit
-cmd add kits let %kit1% = array(\"YT\", \"Voter\", \"Guest\", \"Creator\", \"Emperor\", \"Warrior\", \"God\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
-cmd add kits let %pgrp% = playergroup(%p%)
-cmd add kits if %pgrp% in %kit1% then goto 40
-cmd add kits message %p% §d§lMythic §cNetwork 6» §r§dYou don't have permission to use this kit.
-cmd add kits exit
-cmd add kits ascon /give %p% 267 1
-cmd add kits ascon /give %p% steak 64
-cmd add kits ascon /give %p% iron_pickaxe 1
-cmd add kits ascon /give %p% iron_axe 1
-cmd add kits message %p% §d§lMythic §cNetwork §6» §r§dYou have choosed the §l§6Member§r §dkit!
-cmd add kits exit
-cmd add kits #VoterKit
-cmd add kits let %kit2% = array(\"Voter\", \"YT\", \"Creator\", \"Emperor\", \"Warrior\", \"God\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
-cmd add kits let %pgrp% = playergroup(%p%)
-cmd add kits if %pgrp% in %kit2% then goto 52
-cmd add kits message %p% §d§lMythic §cNetwork §6» §r§dYou don't have permission to use this kit.
-cmd add kits exit
-cmd add kits ascon /give %p% 310 1
-cmd add kits ascon /give %p% 311 1
-cmd add kits ascon /give %p% 308 1
-cmd add kits ascon /give %p% 309 1
-cmd add kits ascon /give %p% 267 1
-cmd add kits ascon /give %p% steak 64
-cmd add kits ascon /give %p% diamond_pickaxe
-cmd add kits ascon /give %p% diamond_axe
-cmd add kits ascon /give %p% ender_pearl 2
-cmd add kits message %p% §d§lMythic §cNetwork §6» §r§dYou have choosed the §e§lVoter§r §dkit!
-cmd add kits exit
-cmd add kits #WarriorKit
-cmd add kits let %kit3% = array(\"Warrior\", \"Creator\", \"Emperor\", \"YT\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
-cmd add kits let %pgrp% = playergroup(%p%)
-cmd add kits if %pgrp% in %kit3% then goto 69
-cmd add kits message %p% §d§lMythic §cNetwork §6» §r§6You don't have permission to use this kit.
-cmd add kits exit
-cmd add kits asop /kitgive warriorkit %p%
-cmd add kits message %p% §d§lMythic §cNetwork §6» §r§dYou have choosed the §c§lWarrior§r §dkit!
-cmd add kits exit
-cmd add kits #EmperorKit
-cmd add kits let %kit4% = array(\"YT\", \"Creator\", \"Emperor\", \"Owner\", \"Admin\", \"Mod\", \"Helper\", \"God\")
-cmd add kits let %pgrp% = playergroup(%p%)
-cmd add kits if %pgrp% in %kit4% then goto 78
-cmd add kits message %p% §d§lMythic §cNetwork §6» §r§dYou don't have permission to use this kit.
-cmd add kits exit
-cmd add kits asop /kitgive emperorkit %p%
-cmd add kits message %p% §d§lMythic §cNetwork §6» §r§dYou have choosed the §6§lEmperor§r §dkit!
-cmd add kits exit
-cmd add kits #GoldenKingKit(MONEY)
-cmd add kits let %money% = playerbalance(%p%)
-cmd add kits if %money% > 2500 then goto 88
-cmd add kits if %money% = 2500 then goto 88
-cmd add kits if %money% < 2500 then goto 86
-cmd add kits message %p% §d§lMythic §cNetwork §6»§r §dYou don't have enough money to buy the §e§lGolden King §r§dkit!
-cmd add kits exit
-cmd add kits ascon /takemoney %p% 2500 
-cmd add kits ascon /give %p% golden_helmet 1
-cmd add kits ascon /give %p% golden_chestplate 1
-cmd add kits ascon /give %p% golden_leggings 1
-cmd add kits ascon /give %p% golden_boots 1
-cmd add kits ascon /give %p% golden_sword 1
-cmd add kits ascon /give %p% golden_apple 12
-cmd add kits ascon /give %p% steak 64
-cmd add kits ascon /give %p% gold_pickaxe 1
-cmd add kits ascon /give %p% gold_axe 1
-cmd add kits message %p% §d§lMythic §cNetwork §6» §r§dYou have bought the §e§lGolden Kit §r§dkit!
-cmd add kits exit
-cmd add kits #OverloadKit(MONEY)
-cmd add kits let %money% = playerbalance(%p%)
-cmd add kits if %money% > 50000 then goto 107
-cmd add kits if %money% = 50000 then goto 107
-cmd add kits if %money% < 50000 then goto 105
-cmd add kits message %p% §d§lMythic §cNetwork §6»§r §dYou don't have enough money to buy the §c§lOverlord §r§dkit!
-cmd add kits exit
-cmd add kits ascon /takemoney %p% 50000 
-cmd add kits ascon /give %p% diamond_helmet 1 {ench:[{id:0s,lvl:4s}]}
-cmd add kits ascon /give %p% diamond_chestplate 1 {ench:[{id:0s,lvl:4s}]}
-cmd add kits ascon /give %p% diamond_leggings 1 {ench:[{id:0s,lvl:4s}]}
-cmd add kits ascon /give %p% diamond_boots 1 {ench:[{id:0s,lvl:4s}]}
-cmd add kits ascon /give %p% diamond_sword 1 {ench:[{id:9s,lvl:4s}]}
-cmd add kits ascon /give %p% bow 1 {ench:[{id:19s,lvl:4s}]}
-cmd add kits ascon /give %p% golden_apple 12
-cmd add kits ascon /give %p% steak 64
-cmd add kits ascon /give %p% 466 64
-cmd add kits ascon /give %p% diamond_pickaxe 1 {ench:[{id:15s,lvl:4s}]}
-cmd add kits ascon /give %p% diamond_axe 1 {ench:[{id:15s,lvl:3s}]}
-cmd add kits ascon /give %p% ender_pearl 16
-cmd add kits ascon /give %p% obsidian 128
-cmd add kits message %p% §d§lMythic §cNetwork §6» §r§dYou have bought the §c§lOverlord §r§dkit!
-cmd add kits exit
+cmd edit kits 1 let %allowed% = array(\"YT\", \"Guest\", \"Creator\", \"God\", \"Warrior\", \"Emperor\", \"Owner\", \"Admin\", \"Moderator\", \"Helper\", \"Voter\", \"Trainee\")
+cmd edit kits 2 let %pgrp% = playergroup(%p%)
+cmd edit kits 3 if %pgrp% in %allowed% then goto 6
+cmd edit kits 4 message %p% §6§d§lMythic §cNetwork §6» §r§dYou don't have permission to use this command.
+cmd edit kits 5 exit
+cmd edit kits 6 %player% = %p%
+cmd edit kits 7 %gui%[\"type\"] = \"form\"
+cmd edit kits 8 %gui%[\"title\"] = \"§6§lKits\"
+cmd edit kits 9 %gui%[\"content\"] = \"§6Choose a kit to make your Faction the best and show your power at the others!\"
+cmd edit kits 10 %button0%[\"text\"] = \"§6§l» §r§6Member\"
+cmd edit kits 11 %button1%[\"text\"] = \"§6§l» §r§eVoter\"
+cmd edit kits 12 %button2%[\"text\"] = \"§d§l» §cWarrior §d- SOON\"
+cmd edit kits 13 %button3%[\"text\"] = \"§d§l» §6Emperor §d- SOON\"
+cmd edit kits 14 %button4%[\"text\"] = \"§e§l» §r§eGolden King §d- 2.500$\"
+cmd edit kits 15 %button5%[\"text\"] = \"§c§l» §r§cOverlord §d- 50.000$\"
+cmd edit kits 16 %button6%[\"text\"] = \"§4§l» §r§6Exit\"
+cmd edit kits 17 %buttons%[] = %button0%
+cmd edit kits 18 %buttons%[] = %button1%
+cmd edit kits 19 %buttons%[] = %button2%
+cmd edit kits 20 %buttons%[] = %button3%
+cmd edit kits 21 %buttons%[] = %button4%
+cmd edit kits 22 %buttons%[] = %button5%
+cmd edit kits 23 %buttons%[] = %button6%
+cmd edit kits 24 %gui%[\"buttons\"] = %buttons%
+cmd edit kits 25 %response% = dialog(%player%, %gui%)
+cmd edit kits 26 if %response% = 0 then goto 35
+cmd edit kits 27 if %response% = 1 then goto 47
+cmd edit kits 28 if %response% = 2 then message %p% §d§lMythic §cNetwork §6»§r §c§lWarrior §r§dkit is currently disabled.
+cmd edit kits 29 if %response% = 3 then message %p% §d§lMythic §cNetwork §6»§r §6§lEmperor §r§dkit is currently disabled.
+cmd edit kits 30 if %response% = 4 then goto 82
+cmd edit kits 31 if %response% = 5 then goto 101
+cmd edit kits 32 if %response% = 6 then exit
+cmd edit kits 33 exit
+cmd edit kits 34 #MemberKit
+cmd edit kits 35 let %kit1% = array(\"YT\", \"Voter\", \"Guest\", \"Creator\", \"Emperor\", \"Warrior\", \"God\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
+cmd edit kits 36 let %pgrp% = playergroup(%p%)
+cmd edit kits 37 if %pgrp% in %kit1% then goto 40
+cmd edit kits 38 message %p% §d§lMythic §cNetwork 6» §r§dYou don't have permission to use this kit.
+cmd edit kits 39 exit
+cmd edit kits 40 ascon /give %p% 267 1
+cmd edit kits 41 ascon /give %p% steak 64
+cmd edit kits 42 ascon /give %p% iron_pickaxe 1
+cmd edit kits 43 ascon /give %p% iron_axe 1
+cmd edit kits 44 message %p% §d§lMythic §cNetwork §6» §r§dYou have choosed the §l§6Member§r §dkit!
+cmd edit kits 45 exit
+cmd edit kits 46 #VoterKit
+cmd edit kits 47 let %kit2% = array(\"Voter\", \"YT\", \"Creator\", \"Emperor\", \"Warrior\", \"God\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
+cmd edit kits 48 let %pgrp% = playergroup(%p%)
+cmd edit kits 49 if %pgrp% in %kit2% then goto 52
+cmd edit kits 50 message %p% §d§lMythic §cNetwork §6» §r§dYou don't have permission to use this kit.
+cmd edit kits 51 exit
+cmd edit kits 52 ascon /give %p% 310 1
+cmd edit kits 53 ascon /give %p% 311 1
+cmd edit kits 54 ascon /give %p% 308 1
+cmd edit kits 55 ascon /give %p% 309 1
+cmd edit kits 56 ascon /give %p% 267 1
+cmd edit kits 57 ascon /give %p% steak 64
+cmd edit kits 58 ascon /give %p% diamond_pickaxe
+cmd edit kits 59 ascon /give %p% diamond_axe
+cmd edit kits 60 ascon /give %p% ender_pearl 2
+cmd edit kits 61 message %p% §d§lMythic §cNetwork §6» §r§dYou have choosed the §e§lVoter§r §dkit!
+cmd edit kits 62 exit
+cmd edit kits 63 #WarriorKit
+cmd edit kits 64 let %kit3% = array(\"Warrior\", \"Creator\", \"Emperor\", \"YT\", \"Owner\", \"Admin\", \"Mod\", \"Helper\")
+cmd edit kits 65 let %pgrp% = playergroup(%p%)
+cmd edit kits 66 if %pgrp% in %kit3% then goto 69
+cmd edit kits 67 message %p% §d§lMythic §cNetwork §6» §r§6You don't have permission to use this kit.
+cmd edit kits 68 exit
+cmd edit kits 69 asop /kitgive warriorkit %p%
+cmd edit kits 70 message %p% §d§lMythic §cNetwork §6» §r§dYou have choosed the §c§lWarrior§r §dkit!
+cmd edit kits 71 exit
+cmd edit kits 72 #EmperorKit
+cmd edit kits 73 let %kit4% = array(\"YT\", \"Creator\", \"Emperor\", \"Owner\", \"Admin\", \"Mod\", \"Helper\", \"God\")
+cmd edit kits 74 let %pgrp% = playergroup(%p%)
+cmd edit kits 75 if %pgrp% in %kit4% then goto 78
+cmd edit kits 76 message %p% §d§lMythic §cNetwork §6» §r§dYou don't have permission to use this kit.
+cmd edit kits 77 exit
+cmd edit kits 78 asop /kitgive emperorkit %p%
+cmd edit kits 79 message %p% §d§lMythic §cNetwork §6» §r§dYou have choosed the §6§lEmperor§r §dkit!
+cmd edit kits 80 exit
+cmd edit kits 81 #GoldenKingKit(MONEY)
+cmd edit kits 82 let %money% = playerbalance(%p%)
+cmd edit kits 83 if %money% > 2500 then goto 88
+cmd edit kits 84 if %money% = 2500 then goto 88
+cmd edit kits 85 if %money% < 2500 then goto 86
+cmd edit kits 86 message %p% §d§lMythic §cNetwork §6»§r §dYou don't have enough money to buy the §e§lGolden King §r§dkit!
+cmd edit kits 87 exit
+cmd edit kits 88 ascon /takemoney %p% 2500 
+cmd edit kits 89 ascon /give %p% golden_helmet 1
+cmd edit kits 90 ascon /give %p% golden_chestplate 1
+cmd edit kits 91 ascon /give %p% golden_leggings 1
+cmd edit kits 92 ascon /give %p% golden_boots 1
+cmd edit kits 93 ascon /give %p% golden_sword 1
+cmd edit kits 94 ascon /give %p% golden_apple 12
+cmd edit kits 95 ascon /give %p% steak 64
+cmd edit kits 96 ascon /give %p% gold_pickaxe 1
+cmd edit kits 97 ascon /give %p% gold_axe 1
+cmd edit kits 98 message %p% §d§lMythic §cNetwork §6» §r§dYou have bought the §e§lGolden Kit §r§dkit!
+cmd edit kits 99 exit
+cmd edit kits 100 #Overlord Kit (Money)
+cmd edit kits 101 let %money% = playerbalance(%p%)
+cmd edit kits 102 if %money% > 50000 then goto 107
+cmd edit kits 103 if %money% = 50000 then goto 107
+cmd edit kits 104 if %money% < 50000 then goto 105
+cmd edit kits 105 message %p% §d§lMythic §cNetwork §6»§r §dYou don't have enough money to buy the §c§lOverlord §r§dkit!
+cmd edit kits 106 exit
+cmd edit kits 107 ascon /takemoney %p% 50000 
+cmd edit kits 108 ascon /give %p% diamond_helmet 1 {ench:[{id:0s,lvl:4s}]}
+cmd edit kits 109 ascon /give %p% diamond_chestplate 1 {ench:[{id:0s,lvl:4s}]}
+cmd edit kits 110 ascon /give %p% diamond_leggings 1 {ench:[{id:0s,lvl:4s}]}
+cmd edit kits 111 ascon /give %p% diamond_boots 1 {ench:[{id:0s,lvl:4s}]}
+cmd edit kits 112 ascon /give %p% diamond_sword 1 {ench:[{id:9s,lvl:4s}]}
+cmd edit kits 113 ascon /give %p% bow 1 {ench:[{id:19s,lvl:4s}]}
+cmd edit kits 114 ascon /give %p% golden_apple 12
+cmd edit kits 115 ascon /give %p% steak 64
+cmd edit kits 116 ascon /give %p% 466 64
+cmd edit kits 117 ascon /give %p% diamond_pickaxe 1 {ench:[{id:15s,lvl:4s}]}
+cmd edit kits 118 ascon /give %p% diamond_axe 1 {ench:[{id:15s,lvl:3s}]}
+cmd edit kits 119 ascon /give %p% ender_pearl 16
+cmd edit kits 120 ascon /give %p% obsidian 128
+cmd edit kits 121 message %p% §d§lMythic §cNetwork §6» §r§dYou have bought the §c§lOverlord §r§dkit!
+cmd edit kits 123 exit

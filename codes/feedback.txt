@@ -12,7 +12,7 @@ cmd edit feedback 10 %response% = dialog(%p%, %form%)
 cmd edit feedback 11 %feedback% = %response%[0]
 cmd edit feedback 12 if varset(%feedback%) then goto 14
 cmd edit feedback 13 exit
-cmd edit feedback 14 %discord_message% = \"**Feedback |** \" + %p% + \" gave feedback » \" + %feedback% + \".\"
+cmd edit feedback 14 %discord_message% = \"**Feedback >** \" + %p% + \" gave feedback » \" + %feedback% + \".\"
 cmd edit feedback 15 let %done% = geturl(\"http://cdn.skysprojects.me/leet/l2d/send.php?channel=680416990938267689&token=SbVKo7aURiF9TuXePR1tRaJyLJgHPwAy8r9U-NWAWLsOh3alyuXFlhECz1WwG5819CSC&message=\" + urlencode(%discord_message%))
 cmd edit feedback 16 message %p% §d§lMythic §cNetwork§6 »§r §dYou sent the following feedback » §6%feedback%§d. Thanks for helping us change Mythic to a better network!
 cmd edit feedback 17 ascon /cmd add fb FBP | %p% sent the following feedback » %feedback%.

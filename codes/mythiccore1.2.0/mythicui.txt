@@ -62,7 +62,7 @@ cmd edit m 60 exit
 cmd edit m 61 %player% = %p%
 cmd edit m 62 %gui%[\"type\"] = \"form\"
 cmd edit m 63 %gui%[\"title\"] = \"§d§lMythic §6UI Info\"
-cmd edit m 64 %gui%[\"content\"] = \"§6Mythic UI info: §dversion 1.0.0MTH\\n§dServices bundled within code, running on Mythic Core Snapshot MTH-1.0.0.\\n§6Made by NikosProGamer\"
+cmd edit m 64 %gui%[\"content\"] = \"§6Mythic UI info: §dversion 1.2.0MTH\\n§dServices bundled within code, running on Mythic Core Snapshot MTH-1.2.0.\\n§6Made by NikosProGamer\"
 cmd edit m 65 %button0%[\"text\"] = \"§cExit\"
 cmd edit m 66 %buttons%[] = %button0%
 cmd edit m 67 %gui%[\"buttons\"] = %buttons%
